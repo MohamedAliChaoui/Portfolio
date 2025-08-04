@@ -1,4 +1,4 @@
-import { PortfolioData, Translations } from '../types/portfolio';
+import { PortfolioData, Translations, LanguageInfo } from '../types/portfolio';
 import profilePhoto from '@assets/photo cv_1754311161081.png';
 
 export const portfolioData: PortfolioData = {
@@ -44,25 +44,27 @@ export const portfolioData: PortfolioData = {
   },
   skills: {
     programming: [
-      { name: "Java", level: 90, icon: "fab fa-java", color: "#f89820" },
-      { name: "Python", level: 85, icon: "fab fa-python", color: "#3776ab" },
-      { name: "JavaScript", level: 80, icon: "fab fa-js-square", color: "#f7df1e" },
-      { name: "PHP", level: 75, icon: "fab fa-php", color: "#777bb4" },
-      { name: "C/C++", level: 80, icon: "fas fa-copyright", color: "#00599c" }
+      { name: "Java", level: 90, icon: "devicon-java-plain colored", color: "#f89820" },
+      { name: "Python", level: 85, icon: "devicon-python-plain colored", color: "#3776ab" },
+      { name: "JavaScript", level: 80, icon: "devicon-javascript-plain colored", color: "#f7df1e" },
+      { name: "PHP", level: 75, icon: "devicon-php-plain colored", color: "#777bb4" },
+      { name: "C/C++", level: 80, icon: "devicon-cplusplus-plain colored", color: "#00599c" },
+      { name: "HTML/CSS", level: 85, icon: "devicon-html5-plain colored", color: "#e34f26" },
+      { name: "OCaml", level: 70, icon: "fas fa-code", color: "#ec6813" }
     ],
     frameworks: [
-      { name: "Vue.js", level: 85, icon: "fab fa-vuejs", color: "#4fc08d" },
-      { name: "Spring Boot", level: 80, icon: "fas fa-leaf", color: "#6db33f" },
-      { name: "Git", level: 90, icon: "fab fa-git-alt", color: "#f05032" },
-      { name: "Shell scripting", level: 75, icon: "fas fa-terminal", color: "#4eaa25" },
+      { name: "Vue.js", level: 85, icon: "devicon-vuejs-plain colored", color: "#4fc08d" },
+      { name: "Spring Boot", level: 80, icon: "devicon-spring-plain colored", color: "#6db33f" },
+      { name: "Git", level: 90, icon: "devicon-git-plain colored", color: "#f05032" },
+      { name: "Shell scripting", level: 75, icon: "devicon-bash-plain colored", color: "#4eaa25" },
       { name: "Vite", level: 80, icon: "fas fa-bolt", color: "#ffd62e" }
     ],
     databases: [
-      { name: "MySQL", level: 85, icon: "fas fa-database", color: "#4479a1" },
-      { name: "PostgreSQL", level: 80, icon: "fas fa-elephant", color: "#336791" },
-      { name: "Linux", level: 75, icon: "fab fa-linux", color: "#fcc624" },
+      { name: "MySQL", level: 85, icon: "devicon-mysql-plain colored", color: "#4479a1" },
+      { name: "PostgreSQL", level: 80, icon: "devicon-postgresql-plain colored", color: "#336791" },
+      { name: "Linux", level: 75, icon: "devicon-linux-plain colored", color: "#fcc624" },
       { name: "Réseaux TCP/IP", level: 70, icon: "fas fa-network-wired", color: "#28a745" },
-      { name: "Windows Server", level: 65, icon: "fab fa-windows", color: "#0078d4" }
+      { name: "Windows Server", level: 65, icon: "devicon-windows8-original colored", color: "#0078d4" }
     ]
   },
   projects: [
@@ -147,6 +149,7 @@ export const translations: Translations = {
   // About Section
   'about.title': { fr: 'À propos de moi', en: 'About Me' },
   'about.subtitle': { fr: 'Découvrez mon parcours et mes motivations dans le domaine de l\'informatique', en: 'Discover my journey and motivations in computer science' },
+  'about.description': { fr: 'Titulaire d\'une licence en informatique, je poursuis actuellement mes études en première année de master à l\'Université de Bordeaux. Curieux, adaptable et motivé par les défis intellectuels, j\'apprécie particulièrement le travail en équipe. Je suis pleinement engagé dans l\'approfondissement de mes compétences et prêt à relever de nouveaux projets ambitieux.', en: 'Holder of a Bachelor\'s degree in Computer Science, I am currently pursuing my Master\'s degree at the University of Bordeaux. Curious, adaptable and motivated by intellectual challenges, I enjoy teamwork. I am fully committed to deepening my skills and ready to take on ambitious new projects.' },
   'about.education': { fr: 'Parcours académique', en: 'Academic Background' },
   'about.languages': { fr: 'Langues', en: 'Languages' },
   'about.qualities': { fr: 'Mes qualités personnelles', en: 'My Personal Qualities' },

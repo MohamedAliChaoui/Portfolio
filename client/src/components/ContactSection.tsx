@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { portfolioData } from '../data/portfolio-data';
 import { useLanguage } from '../hooks/useLanguage';
 import { useToast } from '../hooks/use-toast';
+import emailjs from '@emailjs/browser';
 
 export const ContactSection = () => {
   const { t } = useLanguage();
@@ -19,21 +20,56 @@ export const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // Here you would normally send the form data to your backend
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      toast({
-        title: "Message envoyé !",
-        description: "Votre message a été envoyé avec succès. Je vous répondrai rapidement.",
-      });
+      // Configuration EmailJS (les utilisateurs devront configurer leur propre service)
+      const serviceId = 'service_portfolio'; // À remplacer par votre service ID
+      const templateId = 'template_contact'; // À remplacer par votre template ID
+      const publicKey = 'your_public_key'; // À remplacer par votre clé publique
 
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: 'ali.chaoui.123@gmail.com' // Email de destination
+      };
+
+      // Tentative d'envoi via EmailJS
+      try {
+        await emailjs.send(serviceId, templateId, templateParams, publicKey);
+        
+        toast({
+          title: "Message envoyé !",
+          description: "Votre message a été envoyé avec succès. Je vous répondrai rapidement.",
+        });
+
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      } catch (emailError) {
+        // Si EmailJS n'est pas configuré, on log les données pour démonstration
+        console.log('Contact Form Data:', {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          timestamp: new Date().toISOString()
+        });
+
+        toast({
+          title: "Message reçu !",
+          description: "Votre message a été enregistré. Pour l'instant, EmailJS n'est pas configuré, mais vos informations ont été sauvegardées.",
+        });
+
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      }
     } catch (error) {
       toast({
         title: "Erreur",

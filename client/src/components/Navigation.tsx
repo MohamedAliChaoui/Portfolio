@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTheme } from './ThemeProvider';
 import { useLanguage } from '../hooks/useLanguage';
+import { Logo } from './Logo';
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,13 +27,7 @@ export const Navigation = () => {
           {/* Logo MAC */}
           <div className="flex items-center space-x-3">
             <div className="relative">
-              {/* Custom MAC Logo */}
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300">
-                <span className="text-white font-bold text-lg">MAC</span>
-              </div>
-              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-accent rounded-full flex items-center justify-center">
-                <i className="fas fa-code text-white text-xs"></i>
-              </div>
+              <Logo className="w-16 h-8 transform hover:scale-110 transition-transform duration-300" />
             </div>
             <div className="hidden sm:block">
               <h3 className="font-semibold text-gray-900 dark:text-white">Mohamed Ali Chaoui</h3>
@@ -87,9 +82,9 @@ export const Navigation = () => {
             {/* Dark Mode Toggle */}
             <button 
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+              className="p-3 rounded-lg bg-primary/10 hover:bg-primary/20 dark:bg-secondary/10 dark:hover:bg-secondary/20 transition-all duration-200 shadow-sm border border-primary/20 dark:border-secondary/20"
             >
-              <i className={`fas ${theme === 'dark' ? 'fa-sun text-yellow-400' : 'fa-moon text-gray-600'}`}></i>
+              <i className={`fas ${theme === 'dark' ? 'fa-sun text-yellow-500 text-lg' : 'fa-moon text-primary text-lg'}`}></i>
             </button>
 
             {/* Mobile Menu Button */}

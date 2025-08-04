@@ -31,7 +31,7 @@ export interface Education {
   location?: string;
 }
 
-export interface Language {
+export interface LanguageInfo {
   name: string;
   level: string;
   flag: string;
@@ -55,7 +55,7 @@ export interface PortfolioData {
     description: string;
     qualities: string[];
     education: Education[];
-    languages: Language[];
+    languages: LanguageInfo[];
     certifications: Certification[];
   };
   skills: {

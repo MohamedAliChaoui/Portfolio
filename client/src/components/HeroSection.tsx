@@ -50,14 +50,14 @@ export const HeroSection = () => {
 
             {/* Social Links */}
             <div className="flex justify-center lg:justify-start space-x-4 mt-8">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-200 transform hover:scale-110">
-                <i className="fab fa-github text-xl"></i>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-600 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white dark:hover:text-white transition-all duration-200 transform hover:scale-110 shadow-lg">
+                <i className="fab fa-github text-xl text-gray-700 dark:text-gray-300"></i>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-200 transform hover:scale-110">
-                <i className="fab fa-linkedin text-xl"></i>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-600 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white dark:hover:text-white transition-all duration-200 transform hover:scale-110 shadow-lg">
+                <i className="fab fa-linkedin text-xl text-gray-700 dark:text-gray-300"></i>
               </a>
-              <a href={`mailto:${portfolioData.contact.email}`} className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-200 transform hover:scale-110">
-                <i className="fas fa-envelope text-xl"></i>
+              <a href={`mailto:${portfolioData.contact.email}`} className="w-12 h-12 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-600 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white dark:hover:text-white transition-all duration-200 transform hover:scale-110 shadow-lg">
+                <i className="fas fa-envelope text-xl text-gray-700 dark:text-gray-300"></i>
               </a>
             </div>
           </div>

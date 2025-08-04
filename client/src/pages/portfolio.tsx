@@ -9,7 +9,7 @@ import { ThemeProvider } from '../components/ThemeProvider';
 
 export default function Portfolio() {
   return (
-    <ThemeProvider defaultTheme="light" storageKey="portfolio-theme">
+    <ThemeProvider defaultTheme="dark" storageKey="portfolio-theme">
       <div className="min-h-screen bg-background text-foreground">
         <Navigation />
         <HeroSection />

@@ -24,6 +24,12 @@ export const AboutSection = () => {
           </p>
         </div>
 
+        <div className="mb-8">
+          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            {t('about.description')}
+          </p>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
@@ -106,7 +112,7 @@ export const AboutSection = () => {
                 className="inline-flex items-center px-6 py-3 bg-primary hover:bg-secondary text-white rounded-lg font-medium transition-all duration-200 shadow-lg"
               >
                 <i className="fas fa-download mr-2"></i>
-                Télécharger mon CV
+                {t('projects.cv.download')}
               </button>
             </div>
           </div>
