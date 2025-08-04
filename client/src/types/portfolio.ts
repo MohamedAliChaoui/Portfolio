@@ -22,6 +22,7 @@ export interface ContactInfo {
   phone: string;
   location: string;
   linkedin: string;
+  github: string;
 }
 
 export interface Education {
@@ -34,7 +35,7 @@ export interface Education {
 export interface LanguageInfo {
   name: string;
   level: string;
-  flag: string;
+  flag?: string;
 }
 
 export interface Certification {
@@ -42,6 +43,13 @@ export interface Certification {
   issuer: string;
   date: string;
   level?: string;
+}
+
+export interface Experience {
+  position: string;
+  company: string;
+  period: string;
+  description: string;
 }
 
 export interface PortfolioData {
@@ -54,6 +62,7 @@ export interface PortfolioData {
   about: {
     description: string;
     qualities: string[];
+    experiences: Experience[];
     education: Education[];
     languages: LanguageInfo[];
     certifications: Certification[];

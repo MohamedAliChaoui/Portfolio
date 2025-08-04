@@ -9,29 +9,48 @@ export const portfolioData: PortfolioData = {
     photo: profilePhoto
   },
   about: {
-    description: "Titulaire d'une licence en informatique, je poursuis actuellement mes études en première année de master à l'Université de Bordeaux. Curieux, adaptable et motivé par les défis intellectuels, j'apprécie particulièrement le travail en équipe. Je suis pleinement engagé dans l'approfondissement de mes compétences et prêt à relever de nouveaux projets ambitieux.",
-    qualities: ["Curieux", "Adaptable", "Motivé", "Équipe", "Organisé", "Communicatif"],
+    description: "Titulaire d'une licence en informatique, je poursuis actuellement mes études en première année de master à l'Université de Bordeaux. Curieux, adaptable et motivé par les défis intellectuels, j'apprécie particulièrement le travail en équipe. Soucieux de développer mon expertise, je suis pleinement engagé dans l'approfondissement de mes compétences et prêt à relever de nouveaux projets ambitieux.",
+    qualities: ["Communication", "Esprit d'équipe", "Organisation", "Gestion des tâches", "Adaptabilité", "Motivation"],
+    experiences: [
+      {
+        position: "Equipier de commerce",
+        company: "AUCHAN",
+        period: "Août 2024 - Présent",
+        description: "Accueil client, gestion des stocks et support commercial"
+      },
+      {
+        position: "Expert en inventaire", 
+        company: "RGIS",
+        period: "Novembre 2021 - Juin 2024",
+        description: "Réalisation d'inventaires précis et gestion des données"
+      }
+    ],
     education: [
       {
-        degree: "Master 1 Informatique",
-        institution: "Université de Bordeaux",
-        period: "2024-2025"
+        degree: "Master 1 - Université de Bordeaux",
+        institution: "Informatique",
+        period: "Septembre 2025 – Juin 2026"
       },
       {
-        degree: "Licence Informatique",
-        institution: "Université d'Avignon",
-        period: "2020-2024"
+        degree: "Licence 3 - Université de Bordeaux",
+        institution: "Informatique",
+        period: "Septembre 2024 – Juin 2025"
       },
       {
-        degree: "Baccalauréat Sciences Physiques",
+        degree: "Licence 1 et 2 - Université d'Avignon",
+        institution: "Informatique",
+        period: "Septembre 2020 – Juin 2024"
+      },
+      {
+        degree: "Baccalauréat Science Physique et Chimie",
         institution: "Fès, Maroc",
-        period: "2019-2020"
+        period: "Septembre 2019 – Juin 2020"
       }
     ],
     languages: [
-      { name: "Français", level: "Avancé", flag: "🇫🇷" },
-      { name: "Anglais", level: "Courant", flag: "🇬🇧" },
-      { name: "Arabe", level: "Maternel", flag: "🇲🇦" }
+      { name: "FRANÇAIS", level: "Avancé" },
+      { name: "ANGLAIS", level: "Courant" },
+      { name: "ARABE", level: "Langue maternelle" }
     ],
     certifications: [
       {
@@ -44,80 +63,84 @@ export const portfolioData: PortfolioData = {
   },
   skills: {
     programming: [
+      { name: "C/C++", level: 90, icon: "devicon-cplusplus-plain colored", color: "#00599c" },
       { name: "Java", level: 90, icon: "devicon-java-plain colored", color: "#f89820" },
+      { name: "PHP", level: 85, icon: "devicon-php-plain colored", color: "#777bb4" },
       { name: "Python", level: 85, icon: "devicon-python-plain colored", color: "#3776ab" },
+      { name: "OCaml", level: 80, icon: "fas fa-code", color: "#ec6813" },
       { name: "JavaScript", level: 80, icon: "devicon-javascript-plain colored", color: "#f7df1e" },
-      { name: "PHP", level: 75, icon: "devicon-php-plain colored", color: "#777bb4" },
-      { name: "C/C++", level: 80, icon: "devicon-cplusplus-plain colored", color: "#00599c" },
       { name: "HTML/CSS", level: 85, icon: "devicon-html5-plain colored", color: "#e34f26" },
-      { name: "OCaml", level: 70, icon: "fas fa-code", color: "#ec6813" }
+      { name: "Julia", level: 70, icon: "fas fa-calculator", color: "#9558b2" },
+      { name: "Coq", level: 65, icon: "fas fa-cogs", color: "#d2691e" }
     ],
     frameworks: [
+      { name: "Spring Boot", level: 85, icon: "devicon-spring-plain colored", color: "#6db33f" },
       { name: "Vue.js", level: 85, icon: "devicon-vuejs-plain colored", color: "#4fc08d" },
-      { name: "Spring Boot", level: 80, icon: "devicon-spring-plain colored", color: "#6db33f" },
-      { name: "Git", level: 90, icon: "devicon-git-plain colored", color: "#f05032" },
+      { name: "Vite", level: 80, icon: "fas fa-bolt", color: "#ffd62e" },
       { name: "Shell scripting", level: 75, icon: "devicon-bash-plain colored", color: "#4eaa25" },
-      { name: "Vite", level: 80, icon: "fas fa-bolt", color: "#ffd62e" }
+      { name: "jQuery", level: 70, icon: "devicon-jquery-plain colored", color: "#0769ad" }
     ],
     databases: [
-      { name: "MySQL", level: 85, icon: "devicon-mysql-plain colored", color: "#4479a1" },
-      { name: "PostgreSQL", level: 80, icon: "devicon-postgresql-plain colored", color: "#336791" },
-      { name: "Linux", level: 75, icon: "devicon-linux-plain colored", color: "#fcc624" },
-      { name: "Réseaux TCP/IP", level: 70, icon: "fas fa-network-wired", color: "#28a745" },
-      { name: "Windows Server", level: 65, icon: "devicon-windows8-original colored", color: "#0078d4" }
+      { name: "MySQL", level: 90, icon: "devicon-mysql-plain colored", color: "#4479a1" },
+      { name: "PostgreSQL", level: 85, icon: "devicon-postgresql-plain colored", color: "#336791" },
+      { name: "PL/SQL", level: 80, icon: "fas fa-database", color: "#ff6600" },
+      { name: "Linux/Ubuntu Server", level: 80, icon: "devicon-linux-plain colored", color: "#fcc624" },
+      { name: "Windows Server", level: 75, icon: "devicon-windows8-original colored", color: "#0078d4" },
+      { name: "VMware", level: 70, icon: "fas fa-server", color: "#607078" },
+      { name: "Cisco (VLAN, Routing)", level: 75, icon: "fas fa-network-wired", color: "#1ba0d7" }
     ]
   },
   projects: [
     {
       id: "1",
-      title: "Application client-serveur de recherche d'images",
+      title: "Application client-serveur",
       year: "2023",
-      description: "Système de recherche d'images par similarité avec API REST, indexation pgvector et interface Vue.js.",
+      description: "Développement d'un système client-serveur de recherche d'images par similarité, avec API REST, indexation pgvector, interface Vue.js et CI/CD GitLab.",
       technologies: ["Java", "Spring Boot", "PostgreSQL", "Vue.js", "GitLab CI/CD"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       icon: "fas fa-server"
     },
     {
       id: "2",
-      title: "myBike – Site de gestion de commandes",
+      title: "Création d'un site web (myBike)",
       year: "2023",
-      description: "Site web pour un magasin de cyclisme avec système de gestion des commandes et des droits d'accès.",
-      technologies: ["PHP", "PDO", "MySQL"],
+      description: "Développement d'un site de gestion de commandes pour un magasin de cyclisme.",
+      technologies: ["PHP", "PDO"],
       image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       icon: "fas fa-bicycle"
     },
     {
       id: "3",
-      title: "Plateforme de monitoring de serveurs",
+      title: "Plate-forme de Monitoring",
       year: "2023",
-      description: "Système de surveillance de serveurs et gestion des alertes développé en collaboration avec le C.E.R.T.",
+      description: "Surveillance de serveurs et gestion des alertes en lien avec le C.E.R.T., via Bash et Python.",
       technologies: ["Bash", "Python"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       icon: "fas fa-chart-line"
     },
     {
       id: "4",
-      title: "Blog interactif",
+      title: "Création d'un site web (Blog)",
       year: "2022",
-      description: "Site web permettant aux utilisateurs de rechercher, publier et commenter des articles de blog.",
+      description: "Développement d'un site interactif permettant aux utilisateurs de rechercher, publier et commenter des articles.",
       technologies: ["HTML", "CSS", "JavaScript", "PHP"],
       image: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       icon: "fas fa-blog"
     },
     {
       id: "5",
-      title: "Démineur en C++ et Python",
-      year: "2020-2022",
-      description: "Implémentation du jeu classique Démineur en appliquant les principes de la programmation orientée objet.",
+      title: "Démineur en C++",
+      year: "2020/2022",
+      description: "Développement du jeu en Python et en C++ en appliquant la programmation orientée objet.",
       technologies: ["C++", "Python"],
       image: "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       icon: "fas fa-gamepad"
     },
     {
       id: "6",
-      title: "Compression et décompression de fichiers",
+      title: "Compression et décompression de Fichiers",
       year: "2021",
-      description: "Implémentation d'un algorithme permettant la compression et la décompression réversible de fichiers texte.",
+      description: "Implémentation d'un algorithme permettant la compression et la réversibilité des fichiers texte.",
       technologies: ["C"],
       image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       icon: "fas fa-file-archive"
@@ -127,7 +150,8 @@ export const portfolioData: PortfolioData = {
     email: "ali.chaoui.123@gmail.com",
     phone: "06 51 61 56 86",
     location: "Bordeaux, France",
-    linkedin: "Mohamed Ali Chaoui"
+    linkedin: "https://www.linkedin.com/in/mohamed-ali-chaoui-25151b196",
+    github: "https://github.com/MohamedAliChaoui"
   }
 };
 

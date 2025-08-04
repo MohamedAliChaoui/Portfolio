@@ -34,6 +34,26 @@ export const AboutSection = () => {
           <div className="space-y-6">
             <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
               <h3 className="text-xl font-semibold mb-3 flex items-center">
+                <i className="fas fa-briefcase text-primary mr-3"></i>
+                Expériences professionnelles
+              </h3>
+              <div className="space-y-3">
+                {portfolioData.about.experiences.map((exp, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <div className="w-3 h-3 bg-secondary rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-medium">{exp.position}</h4>
+                      <p className="text-primary font-medium">{exp.company}</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">{exp.period}</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{exp.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
+              <h3 className="text-xl font-semibold mb-3 flex items-center">
                 <i className="fas fa-graduation-cap text-primary mr-3"></i>
                 {t('about.education')}
               </h3>
@@ -55,12 +75,11 @@ export const AboutSection = () => {
                 <i className="fas fa-language text-primary mr-3"></i>
                 {t('about.languages')}
               </h3>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="space-y-3">
                 {portfolioData.about.languages.map((lang, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-2xl mb-1">{lang.flag}</div>
-                    <p className="font-medium">{lang.name}</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">{lang.level}</p>
+                  <div key={index} className="flex justify-between items-center p-3 bg-white dark:bg-gray-700 rounded-lg">
+                    <p className="font-medium text-lg">{lang.name}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-600 px-3 py-1 rounded-full">{lang.level}</p>
                   </div>
                 ))}
               </div>
