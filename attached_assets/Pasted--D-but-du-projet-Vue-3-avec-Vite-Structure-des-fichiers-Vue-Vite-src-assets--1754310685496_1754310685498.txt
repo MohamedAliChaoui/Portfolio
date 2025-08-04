@@ -1,0 +1,130 @@
+// Début du projet Vue 3 avec Vite
+
+// Structure des fichiers (Vue + Vite)
+// src/
+//   assets/
+//   components/
+//     Header.vue
+//     Footer.vue
+//     Home.vue
+//     About.vue
+//     Skills.vue
+//     Projects.vue
+//     Contact.vue
+//   App.vue
+//   main.js
+// public/
+// index.html
+// vite.config.js
+
+// --- main.js ---
+import { createApp } from 'vue'
+import App from './App.vue'
+import './assets/style.css'
+
+createApp(App).mount('#app')
+
+// --- App.vue ---
+<template>
+  <div id="app">
+    <Header :lang="lang" @toggle-lang="toggleLang" />
+    <main>
+      <Home :lang="lang" />
+      <About :lang="lang" />
+      <Skills :lang="lang" />
+      <Projects :lang="lang" />
+      <Contact :lang="lang" />
+    </main>
+    <Footer />
+  </div>
+</template>
+
+<script>
+import Header from './components/Header.vue'
+import Home from './components/Home.vue'
+import About from './components/About.vue'
+import Skills from './components/Skills.vue'
+import Projects from './components/Projects.vue'
+import Contact from './components/Contact.vue'
+import Footer from './components/Footer.vue'
+
+export default {
+  components: { Header, Home, About, Skills, Projects, Contact, Footer },
+  data() {
+    return { lang: 'fr' };
+  },
+  methods: {
+    toggleLang() {
+      this.lang = this.lang === 'fr' ? 'en' : 'fr';
+    }
+  }
+}
+</script>
+
+// Chaque composant (Home.vue, About.vue, etc.) utilisera :lang comme prop
+// et aura les textes en deux langues selon la valeur : "fr" ou "en".
+
+// Exemple dans Home.vue :
+<template>
+  <section class="home">
+    <h1>{{ content.title }}</h1>
+    <p>{{ content.subtitle }}</p>
+  </section>
+</template>
+
+<script>
+export default {
+  props: ['lang'],
+  computed: {
+    content() {
+      return this.lang === 'fr'
+        ? { title: 'Bienvenue sur mon portfolio', subtitle: 'Je suis étudiant en Master Informatique à Bordeaux.' }
+        : { title: 'Welcome to my portfolio', subtitle: 'I am a Master’s student in Computer Science in Bordeaux.' };
+    }
+  }
+}
+</script>
+
+<style scoped>
+.home {
+  text-align: center;
+  padding: 3rem;
+}
+</style>
+
+// --- Bouton dans Header.vue ---
+<template>
+  <header>
+    <nav>
+      <h2>Mohamed Ali Chaoui</h2>
+      <button @click="$emit('toggle-lang')">
+        {{ lang === 'fr' ? 'EN' : 'FR' }}
+      </button>
+    </nav>
+  </header>
+</template>
+
+<script>
+export default {
+  props: ['lang']
+}
+</script>
+
+<style scoped>
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #f4f4f4;
+}
+</style>
+
+// Tu peux ensuite remplir About.vue, Skills.vue, Projects.vue, Contact.vue
+// selon le même principe de props "lang" et texte bilingue.
+
+// N'oublie pas d'ajouter une gestion de formulaire de contact dans Contact.vue,
+// par exemple avec EmailJS (très simple à intégrer avec Vue 3).
+
+// Ce projet est 100% déployable sur Replit (importer ton repo GitHub ou créer un projet Vue + Vite directement).
+
+// Prêt à personnaliser ton contenu ? Je peux t'aider à remplir chaque section avec tes infos et projets.

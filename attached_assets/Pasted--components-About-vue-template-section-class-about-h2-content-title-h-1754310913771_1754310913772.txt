@@ -1,0 +1,401 @@
+<!-- components/About.vue -->
+<template>
+  <section class="about">
+    <h2>{{ content.title }}</h2>
+    <p>{{ content.description1 }}</p>
+    <p>{{ content.description2 }}</p>
+  </section>
+</template>
+
+<script>
+export default {
+  props: ['lang'],
+  computed: {
+    content() {
+      return this.lang === 'fr'
+        ? {
+            title: 'À propos de moi',
+            description1:
+              "Titulaire d’une licence en informatique, je poursuis actuellement mes études en première année de master à l’Université de Bordeaux.",
+            description2:
+              "Curieux, adaptable et motivé par les défis intellectuels, j’apprécie particulièrement le travail en équipe. Je suis pleinement engagé dans l’approfondissement de mes compétences et prêt à relever de nouveaux projets ambitieux."
+          }
+        : {
+            title: 'About Me',
+            description1:
+              "Holder of a Bachelor's degree in Computer Science, I am currently pursuing my Master's degree at the University of Bordeaux.",
+            description2:
+              "Curious, adaptable and motivated by intellectual challenges, I enjoy teamwork. I am fully committed to deepening my skills and ready to take on ambitious new projects."
+          };
+    }
+  }
+}
+</script>
+
+<style scoped>
+.about {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  line-height: 1.6;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- components/Skills.vue -->
+<template>
+  <section class="skills">
+    <h2>{{ content.title }}</h2>
+
+    <div class="category" v-for="(section, key) in content.sections" :key="key">
+      <h3>{{ section.title }}</h3>
+      <ul>
+        <li v-for="skill in section.items" :key="skill">{{ skill }}</li>
+      </ul>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  props: ['lang'],
+  computed: {
+    content() {
+      return this.lang === 'fr'
+        ? {
+            title: 'Compétences',
+            sections: {
+              programming: {
+                title: 'Langages de programmation',
+                items: ['C', 'C++', 'Java', 'Python', 'PHP', 'OCaml', 'JavaScript (JQuery)', 'HTML/CSS', 'Julia', 'Coq']
+              },
+              tools: {
+                title: 'Outils et frameworks',
+                items: ['Spring Boot', 'Vue.js', 'Vite', 'Shell scripting', 'Git', 'GitLab CI/CD', 'VMware', 'RStudio', 'Office 365']
+              },
+              databases: {
+                title: 'Bases de données',
+                items: ['MySQL', 'PostgreSQL', 'PL/SQL']
+              },
+              networks: {
+                title: 'Réseaux & Systèmes',
+                items: ['TCP/IP', 'DNS', 'DHCP', 'IPv4/IPv6', 'Cisco (VLAN, Routing, Switching)', 'Windows Server', 'Linux/Ubuntu Server']
+              },
+              softskills: {
+                title: 'Compétences personnelles',
+                items: ['Communication', 'Esprit d’équipe', 'Organisation', 'Gestion des tâches']
+              }
+            }
+          }
+        : {
+            title: 'Skills',
+            sections: {
+              programming: {
+                title: 'Programming Languages',
+                items: ['C', 'C++', 'Java', 'Python', 'PHP', 'OCaml', 'JavaScript (JQuery)', 'HTML/CSS', 'Julia', 'Coq']
+              },
+              tools: {
+                title: 'Tools and Frameworks',
+                items: ['Spring Boot', 'Vue.js', 'Vite', 'Shell scripting', 'Git', 'GitLab CI/CD', 'VMware', 'RStudio', 'Office 365']
+              },
+              databases: {
+                title: 'Databases',
+                items: ['MySQL', 'PostgreSQL', 'PL/SQL']
+              },
+              networks: {
+                title: 'Networks & Systems',
+                items: ['TCP/IP', 'DNS', 'DHCP', 'IPv4/IPv6', 'Cisco (VLAN, Routing, Switching)', 'Windows Server', 'Linux/Ubuntu Server']
+              },
+              softskills: {
+                title: 'Soft Skills',
+                items: ['Communication', 'Teamwork', 'Organization', 'Task Management']
+              }
+            }
+          };
+    }
+  }
+}
+</script>
+
+<style scoped>
+.skills {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.category {
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #eee;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- components/Projects.vue -->
+<template>
+  <section class="projects">
+    <h2>{{ content.title }}</h2>
+    <div class="project-card" v-for="project in content.projects" :key="project.title">
+      <h3>{{ project.title }} <span>({{ project.year }})</span></h3>
+      <p>{{ project.description }}</p>
+      <p><strong>{{ content.techLabel }}:</strong> {{ project.technologies }}</p>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  props: ['lang'],
+  computed: {
+    content() {
+      return this.lang === 'fr'
+        ? {
+            title: 'Projets académiques',
+            techLabel: 'Technologies',
+            projects: [
+              {
+                title: 'myBike – Site de gestion de commandes',
+                year: '2023',
+                description: 'Développement d’un site pour un magasin de cyclisme avec gestion des droits d’accès.',
+                technologies: 'PHP, PDO, MySQL'
+              },
+              {
+                title: 'Plateforme de monitoring de serveurs',
+                year: '2023',
+                description: 'Surveillance de serveurs et gestion des alertes avec le C.E.R.T.',
+                technologies: 'Bash, Python'
+              },
+              {
+                title: 'Application client-serveur de recherche d’images',
+                year: '2023',
+                description: 'Recherche d’images par similarité avec API REST, pgvector et Vue.js.',
+                technologies: 'Java (Spring Boot), PostgreSQL, Vue.js, GitLab CI/CD'
+              },
+              {
+                title: 'Blog interactif',
+                year: '2022',
+                description: 'Création d’un site permettant de publier et commenter des articles.',
+                technologies: 'HTML, CSS, JavaScript, PHP'
+              },
+              {
+                title: 'Démineur en C++ et Python',
+                year: '2020–2022',
+                description: 'Développement du jeu en appliquant la POO.',
+                technologies: 'C++, Python'
+              },
+              {
+                title: 'Compression/décompression de fichiers',
+                year: '2021',
+                description: 'Implémentation d’un algorithme de compression réversible.',
+                technologies: 'C'
+              }
+            ]
+          }
+        : {
+            title: 'Academic Projects',
+            techLabel: 'Technologies',
+            projects: [
+              {
+                title: 'myBike – Order Management Website',
+                year: '2023',
+                description: 'Developed a site for a cycling shop with access control.',
+                technologies: 'PHP, PDO, MySQL'
+              },
+              {
+                title: 'Server Monitoring Platform',
+                year: '2023',
+                description: 'Server monitoring and alert system with the CERT.',
+                technologies: 'Bash, Python'
+              },
+              {
+                title: 'Client-Server Image Search App',
+                year: '2023',
+                description: 'Image search by similarity using API REST, pgvector and Vue.js.',
+                technologies: 'Java (Spring Boot), PostgreSQL, Vue.js, GitLab CI/CD'
+              },
+              {
+                title: 'Interactive Blog',
+                year: '2022',
+                description: 'Created a blog site to publish and comment on articles.',
+                technologies: 'HTML, CSS, JavaScript, PHP'
+              },
+              {
+                title: 'Minesweeper in C++ and Python',
+                year: '2020–2022',
+                description: 'Object-oriented implementation of the Minesweeper game.',
+                technologies: 'C++, Python'
+              },
+              {
+                title: 'File Compression and Decompression',
+                year: '2021',
+                description: 'Implemented a reversible text file compression algorithm.',
+                technologies: 'C'
+              }
+            ]
+          };
+    }
+  }
+}
+</script>
+
+<style scoped>
+.projects {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.project-card {
+  background: #f9f9f9;
+  border-left: 4px solid #4caf50;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  margin: 0 0 0.5rem;
+}
+
+.project-card span {
+  font-weight: normal;
+  color: #888;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- components/Contact.vue -->
+<template>
+  <section class="contact">
+    <h2>{{ content.title }}</h2>
+    <form :action="formAction" method="POST">
+      <label>
+        {{ content.name }}
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        {{ content.email }}
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        {{ content.message }}
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <button type="submit">{{ content.submit }}</button>
+    </form>
+  </section>
+</template>
+
+<script>
+export default {
+  props: ['lang'],
+  computed: {
+    content() {
+      return this.lang === 'fr'
+        ? {
+            title: 'Contactez-moi',
+            name: 'Nom',
+            email: 'Adresse e-mail',
+            message: 'Votre message',
+            submit: 'Envoyer'
+          }
+        : {
+            title: 'Contact Me',
+            name: 'Name',
+            email: 'Email address',
+            message: 'Your message',
+            submit: 'Send'
+          };
+    },
+    formAction() {
+      // Remplace cette URL par celle fournie par Formspree
+      return 'https://formspree.io/f/xyzabcde';
+    }
+  }
+}
+</script>
+
+<style scoped>
+.contact {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 0.7rem;
+  font-size: 1rem;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</style>
