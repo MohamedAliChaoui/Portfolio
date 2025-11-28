@@ -1,0 +1,778 @@
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Ali Chaoui - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#8B5CF6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'typing': 'typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(100px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        typing: {
+                            '0%': { width: '0' },
+                            '100%': { width: '100%' }
+                        },
+                        'blink-caret': {
+                            '0%, 50%': { 'border-color': 'transparent' },
+                            '51%, 100%': { 'border-color': '#3B82F6' }
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <!-- @COMPONENT: Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="font-bold text-xl text-primary">MAC</div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary transition-colors" data-fr="Accueil" data-en="Home">Accueil</a>
+                    <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary transition-colors" data-fr="À propos" data-en="About">À propos</a>
+                    <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary transition-colors" data-fr="Compétences" data-en="Skills">Compétences</a>
+                    <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary transition-colors" data-fr="Projets" data-en="Projects">Projets</a>
+                    <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary transition-colors" data-fr="Contact" data-en="Contact">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Language Toggle -->
+                    <button id="lang-toggle" class="px-3 py-1 border border-gray-300 dark:border-slate-600 rounded-md hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                        <span class="lang-text">EN</span>
+                    </button>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:inline"></i>
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-700">
+            <div class="px-4 py-2 space-y-1">
+                <a href="#home" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-slate-800 nav-link" data-fr="Accueil" data-en="Home">Accueil</a>
+                <a href="#about" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-slate-800 nav-link" data-fr="À propos" data-en="About">À propos</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-slate-800 nav-link" data-fr="Compétences" data-en="Skills">Compétences</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-slate-800 nav-link" data-fr="Projets" data-en="Projects">Projets</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-slate-800 nav-link" data-fr="Contact" data-en="Contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left animate-fade-in">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        <span class="hero-greeting" data-fr="Salut, je suis" data-en="Hi, I'm">Salut, je suis</span><br>
+                        <span class="text-primary">Mohamed Ali Chaoui</span>
+                    </h1>
+                    <div class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8 h-16">
+                        <span class="typing-text" data-fr="Étudiant en Master Informatique à Bordeaux – Curieux, rigoureux et passionné par les technologies" data-en="Computer Science Master's Student in Bordeaux – Curious, rigorous and passionate about technology">
+                            Étudiant en Master Informatique à Bordeaux – Curieux, rigoureux et passionné par les technologies
+                        </span>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="px-8 py-3 bg-primary text-white rounded-lg hover:bg-blue-600 transition-colors font-medium">
+                            <span data-fr="Me contacter" data-en="Contact me">Me contacter</span>
+                        </a>
+                        <a href="#" class="px-8 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-medium" data-mock="true" data-implementation="Link to actual CV PDF">
+                            <i class="fas fa-download mr-2"></i>
+                            <span data-fr="Télécharger CV" data-en="Download CV">Télécharger CV</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative animate-slide-up">
+                    <div class="relative w-80 h-80 mx-auto">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-25"></div>
+                        <!-- Professional headshot from provided image -->
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" 
+                             alt="Mohamed Ali Chaoui" 
+                             class="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-slate-800 shadow-2xl"
+                             data-mock-image="true" 
+                             data-implementation="Use provided professional photo from attached_assets/photo cv_1754311161081.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span data-fr="À propos de moi" data-en="About Me">À propos de moi</span>
+                </h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                        <span data-fr="Titulaire d'une licence en informatique, je poursuis actuellement mes études en première année de master à l'Université de Bordeaux." 
+                              data-en="Holder of a Bachelor's degree in Computer Science, I am currently pursuing my Master's degree at the University of Bordeaux.">
+                            Titulaire d'une licence en informatique, je poursuis actuellement mes études en première année de master à l'Université de Bordeaux.
+                        </span>
+                    </p>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                        <span data-fr="Curieux, adaptable et motivé par les défis intellectuels, j'apprécie particulièrement le travail en équipe. Je suis pleinement engagé dans l'approfondissement de mes compétences et prêt à relever de nouveaux projets ambitieux." 
+                              data-en="Curious, adaptable and motivated by intellectual challenges, I enjoy teamwork. I am fully committed to deepening my skills and ready to take on ambitious new projects.">
+                            Curieux, adaptable et motivé par les défis intellectuels, j'apprécie particulièrement le travail en équipe. Je suis pleinement engagé dans l'approfondissement de mes compétences et prêt à relever de nouveaux projets ambitieux.
+                        </span>
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-semibold mb-4">
+                                <span data-fr="Formations" data-en="Education">Formations</span>
+                            </h3>
+                            <div class="space-y-3">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                                    <div>
+                                        <div class="font-medium">Master 1 - Université de Bordeaux</div>
+                                        <div class="text-sm text-gray-500 dark:text-gray-400">2024 - 2025</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-secondary rounded-full mt-2"></div>
+                                    <div>
+                                        <div class="font-medium">Licence - Université d'Avignon</div>
+                                        <div class="text-sm text-gray-500 dark:text-gray-400">2020 - 2024</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-semibold mb-4">
+                                <span data-fr="Langues" data-en="Languages">Langues</span>
+                            </h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center">
+                                    <span data-fr="Français" data-en="French">Français</span>
+                                    <span class="text-sm text-gray-500 dark:text-gray-400" data-fr="Avancé" data-en="Advanced">Avancé</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span data-fr="Anglais" data-en="English">Anglais</span>
+                                    <span class="text-sm text-gray-500 dark:text-gray-400" data-fr="Courant" data-en="Fluent">Courant</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span data-fr="Arabe" data-en="Arabic">Arabe</span>
+                                    <span class="text-sm text-gray-500 dark:text-gray-400" data-fr="Langue maternelle" data-en="Native">Langue maternelle</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <!-- Modern workspace with computer setup -->
+                    <img src="https://images.unsplash.com/photo-1587440871875-191322ee64b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Modern workspace setup with computer and programming environment" 
+                         class="rounded-xl shadow-2xl w-full h-auto" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: About Section -->
+
+    <!-- @COMPONENT: Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span data-fr="Mes Compétences" data-en="My Skills">Mes Compétences</span>
+                </h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Programming Languages -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-code text-2xl text-primary mr-3"></i>
+                        <h3 class="text-xl font-semibold">
+                            <span data-fr="Langages de programmation" data-en="Programming Languages">Langages de programmation</span>
+                        </h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">C</span>
+                        <span class="skill-badge">C++</span>
+                        <span class="skill-badge">Java</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">PHP</span>
+                        <span class="skill-badge">OCaml</span>
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">HTML/CSS</span>
+                        <span class="skill-badge">Julia</span>
+                        <span class="skill-badge">Coq</span>
+                    </div>
+                </div>
+                
+                <!-- Tools & Frameworks -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-tools text-2xl text-secondary mr-3"></i>
+                        <h3 class="text-xl font-semibold">
+                            <span data-fr="Outils et frameworks" data-en="Tools and Frameworks">Outils et frameworks</span>
+                        </h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Spring Boot</span>
+                        <span class="skill-badge">Vue.js</span>
+                        <span class="skill-badge">Vite</span>
+                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">GitLab CI/CD</span>
+                        <span class="skill-badge">VMware</span>
+                        <span class="skill-badge">RStudio</span>
+                        <span class="skill-badge">Office 365</span>
+                    </div>
+                </div>
+                
+                <!-- Databases -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-database text-2xl text-accent mr-3"></i>
+                        <h3 class="text-xl font-semibold">
+                            <span data-fr="Bases de données" data-en="Databases">Bases de données</span>
+                        </h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">MySQL</span>
+                        <span class="skill-badge">PostgreSQL</span>
+                        <span class="skill-badge">PL/SQL</span>
+                    </div>
+                </div>
+                
+                <!-- Networks & Systems -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-network-wired text-2xl text-orange-500 mr-3"></i>
+                        <h3 class="text-xl font-semibold">
+                            <span data-fr="Réseaux & Systèmes" data-en="Networks & Systems">Réseaux & Systèmes</span>
+                        </h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">TCP/IP</span>
+                        <span class="skill-badge">DNS</span>
+                        <span class="skill-badge">DHCP</span>
+                        <span class="skill-badge">IPv4/IPv6</span>
+                        <span class="skill-badge">Cisco</span>
+                        <span class="skill-badge">Windows Server</span>
+                        <span class="skill-badge">Linux/Ubuntu</span>
+                    </div>
+                </div>
+                
+                <!-- Soft Skills -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-users text-2xl text-pink-500 mr-3"></i>
+                        <h3 class="text-xl font-semibold">
+                            <span data-fr="Compétences personnelles" data-en="Soft Skills">Compétences personnelles</span>
+                        </h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge" data-fr="Communication" data-en="Communication">Communication</span>
+                        <span class="skill-badge" data-fr="Esprit d'équipe" data-en="Teamwork">Esprit d'équipe</span>
+                        <span class="skill-badge" data-fr="Organisation" data-en="Organization">Organisation</span>
+                        <span class="skill-badge" data-fr="Gestion des tâches" data-en="Task Management">Gestion des tâches</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Skills Section -->
+
+    <!-- @COMPONENT: Projects Section -->
+    <section id="projects" class="py-20 bg-white dark:bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span data-fr="Mes Projets" data-en="My Projects">Mes Projets</span>
+                </h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1: myBike -->
+                <div class="project-card bg-gray-50 dark:bg-slate-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-semibold">
+                            <span data-fr="myBike – Site de gestion" data-en="myBike – Management Site">myBike – Site de gestion</span>
+                        </h3>
+                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">2023</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        <span data-fr="Développement d'un site pour un magasin de cyclisme avec gestion des droits d'accès." 
+                              data-en="Developed a site for a cycling shop with access control.">
+                            Développement d'un site pour un magasin de cyclisme avec gestion des droits d'accès.
+                        </span>
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-badge">PHP</span>
+                        <span class="tech-badge">PDO</span>
+                        <span class="tech-badge">MySQL</span>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Server Monitoring -->
+                <div class="project-card bg-gray-50 dark:bg-slate-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-semibold">
+                            <span data-fr="Plateforme de monitoring" data-en="Server Monitoring Platform">Plateforme de monitoring</span>
+                        </h3>
+                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">2023</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        <span data-fr="Surveillance de serveurs et gestion des alertes avec le C.E.R.T." 
+                              data-en="Server monitoring and alert system with the CERT.">
+                            Surveillance de serveurs et gestion des alertes avec le C.E.R.T.
+                        </span>
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-badge">Bash</span>
+                        <span class="tech-badge">Python</span>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Image Search App -->
+                <div class="project-card bg-gray-50 dark:bg-slate-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-semibold">
+                            <span data-fr="App recherche d'images" data-en="Image Search App">App recherche d'images</span>
+                        </h3>
+                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">2023</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        <span data-fr="Recherche d'images par similarité avec API REST, pgvector et Vue.js." 
+                              data-en="Image search by similarity using API REST, pgvector and Vue.js.">
+                            Recherche d'images par similarité avec API REST, pgvector et Vue.js.
+                        </span>
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">Spring Boot</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">Vue.js</span>
+                    </div>
+                </div>
+                
+                <!-- Project 4: Interactive Blog -->
+                <div class="project-card bg-gray-50 dark:bg-slate-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-semibold">
+                            <span data-fr="Blog interactif" data-en="Interactive Blog">Blog interactif</span>
+                        </h3>
+                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">2022</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        <span data-fr="Création d'un site permettant de publier et commenter des articles." 
+                              data-en="Created a blog site to publish and comment on articles.">
+                            Création d'un site permettant de publier et commenter des articles.
+                        </span>
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">CSS</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">PHP</span>
+                    </div>
+                </div>
+                
+                <!-- Project 5: Minesweeper -->
+                <div class="project-card bg-gray-50 dark:bg-slate-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-semibold">
+                            <span data-fr="Démineur C++/Python" data-en="Minesweeper C++/Python">Démineur C++/Python</span>
+                        </h3>
+                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">2020–2022</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        <span data-fr="Développement du jeu en appliquant la POO." 
+                              data-en="Object-oriented implementation of the Minesweeper game.">
+                            Développement du jeu en appliquant la POO.
+                        </span>
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-badge">C++</span>
+                        <span class="tech-badge">Python</span>
+                    </div>
+                </div>
+                
+                <!-- Project 6: File Compression -->
+                <div class="project-card bg-gray-50 dark:bg-slate-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-semibold">
+                            <span data-fr="Compression de fichiers" data-en="File Compression">Compression de fichiers</span>
+                        </h3>
+                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">2021</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        <span data-fr="Implémentation d'un algorithme de compression réversible." 
+                              data-en="Implemented a reversible text file compression algorithm.">
+                            Implémentation d'un algorithme de compression réversible.
+                        </span>
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-badge">C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Projects Section -->
+
+    <!-- @COMPONENT: Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-slate-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span data-fr="Contactez-moi" data-en="Contact Me">Contactez-moi</span>
+                </h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 dark:text-gray-400">
+                    <span data-fr="N'hésitez pas à me contacter pour toute opportunité ou collaboration" 
+                          data-en="Feel free to contact me for any opportunity or collaboration">
+                        N'hésitez pas à me contacter pour toute opportunité ou collaboration
+                    </span>
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                            <i class="fas fa-envelope text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg">Email</h3>
+                            <p class="text-gray-600 dark:text-gray-400">ali.chaoui.123@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-secondary rounded-lg flex items-center justify-center">
+                            <i class="fas fa-phone text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg">
+                                <span data-fr="Téléphone" data-en="Phone">Téléphone</span>
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400">06 51 61 56 86</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
+                            <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg">
+                                <span data-fr="Localisation" data-en="Location">Localisation</span>
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400">Bordeaux, France</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg">
+                    <form class="space-y-6" data-mock="true" data-implementation="Integrate with EmailJS or form handler">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">
+                                <span data-fr="Nom" data-en="Name">Nom</span>
+                            </label>
+                            <input type="text" 
+                                   class="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-slate-700 text-gray-900 dark:text-white" 
+                                   data-fr-placeholder="Votre nom" 
+                                   data-en-placeholder="Your name"
+                                   placeholder="Votre nom"
+                                   required />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" 
+                                   class="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-slate-700 text-gray-900 dark:text-white" 
+                                   data-fr-placeholder="votre.email@exemple.com" 
+                                   data-en-placeholder="your.email@example.com"
+                                   placeholder="votre.email@exemple.com"
+                                   required />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-2">
+                                <span data-fr="Message" data-en="Message">Message</span>
+                            </label>
+                            <textarea rows="5" 
+                                      class="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-slate-700 text-gray-900 dark:text-white" 
+                                      data-fr-placeholder="Votre message..." 
+                                      data-en-placeholder="Your message..."
+                                      placeholder="Votre message..."
+                                      required></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-blue-600 transition-colors font-medium">
+                            <span data-fr="Envoyer le message" data-en="Send Message">Envoyer le message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Section -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">Mohamed Ali Chaoui</h3>
+                <p class="text-gray-400 mb-6">
+                    <span data-fr="Étudiant en Master Informatique à Bordeaux" 
+                          data-en="Computer Science Master's Student in Bordeaux">
+                        Étudiant en Master Informatique à Bordeaux
+                    </span>
+                </p>
+                
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="mailto:ali.chaoui.123@gmail.com" 
+                       class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mohamed-ali-chaoui" 
+                       class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                       data-mock="true" data-implementation="Replace with actual LinkedIn URL">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/mohamedali-chaoui" 
+                       class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                       data-mock="true" data-implementation="Replace with actual GitHub URL">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                
+                <div class="border-t border-gray-800 pt-8">
+                    <p class="text-gray-400">
+                        &copy; 2024 Mohamed Ali Chaoui. 
+                        <span data-fr="Tous droits réservés." data-en="All rights reserved.">Tous droits réservés.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <style>
+        .skill-badge {
+            @apply px-3 py-1 bg-primary/10 text-primary text-sm rounded-full font-medium hover:bg-primary hover:text-white transition-colors cursor-default;
+        }
+        
+        .tech-badge {
+            @apply px-2 py-1 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-gray-300 text-xs rounded font-medium;
+        }
+        
+        .project-card:hover .tech-badge {
+            @apply bg-primary/20 text-primary;
+        }
+        
+        .typing-text {
+            overflow: hidden;
+            border-right: 2px solid #3B82F6;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Navigation active state */
+        .nav-link.active {
+            @apply text-primary font-medium;
+        }
+    </style>
+
+    <script>
+        (function() {
+            // Theme Toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
+            
+            // Check for saved theme preference or default to 'light'
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            html.classList.toggle('dark', currentTheme === 'dark');
+            
+            themeToggle.addEventListener('click', () => {
+                html.classList.toggle('dark');
+                const theme = html.classList.contains('dark') ? 'dark' : 'light';
+                localStorage.setItem('theme', theme);
+            });
+            
+            // Language Toggle
+            const langToggle = document.getElementById('lang-toggle');
+            const langText = langToggle.querySelector('.lang-text');
+            let currentLang = 'fr';
+            
+            function updateLanguage(lang) {
+                currentLang = lang;
+                langText.textContent = lang === 'fr' ? 'EN' : 'FR';
+                
+                // Update all elements with language attributes
+                document.querySelectorAll('[data-fr][data-en]').forEach(element => {
+                    const text = element.getAttribute(`data-${lang}`);
+                    if (text) {
+                        element.textContent = text;
+                    }
+                });
+                
+                // Update placeholders
+                document.querySelectorAll(`[data-${lang}-placeholder]`).forEach(element => {
+                    const placeholder = element.getAttribute(`data-${lang}-placeholder`);
+                    if (placeholder) {
+                        element.placeholder = placeholder;
+                    }
+                });
+            }
+            
+            langToggle.addEventListener('click', () => {
+                const newLang = currentLang === 'fr' ? 'en' : 'fr';
+                updateLanguage(newLang);
+                localStorage.setItem('language', newLang);
+            });
+            
+            // Load saved language
+            const savedLang = localStorage.getItem('language') || 'fr';
+            if (savedLang !== 'fr') {
+                updateLanguage(savedLang);
+            }
+            
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const offsetTop = target.offsetTop - 80; // Account for fixed header
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Active navigation highlighting
+            function updateActiveNav() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                let currentSection = '';
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= 100 && rect.bottom >= 100) {
+                        currentSection = section.id;
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', updateActiveNav);
+            
+            // Animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all sections for animations
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Form submission (mock)
+            document.querySelector('form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // TODO: Implement actual form submission with EmailJS or backend service
+                alert(currentLang === 'fr' 
+                    ? 'Merci pour votre message ! Je vous répondrai bientôt.' 
+                    : 'Thank you for your message! I will get back to you soon.');
+                this.reset();
+            });
+            
+        })();
+    </script>
+</body>
+</html>
