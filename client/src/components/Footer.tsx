@@ -1,5 +1,6 @@
 import { portfolioData } from '../data/portfolio-data';
 import { useLanguage } from '../hooks/useLanguage';
+import { Github, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 
 export const Footer = () => {
   const { t } = useLanguage();
@@ -26,23 +27,23 @@ export const Footer = () => {
               {t('footer.description')}
             </p>
             <div className="flex space-x-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-200">
-                <i className="fab fa-github"></i>
+              <a href={portfolioData.contact.github} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-200">
+                <Github className="w-5 h-5" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-200">
-                <i className="fab fa-linkedin"></i>
+              <a href={portfolioData.contact.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-200">
+                <Linkedin className="w-5 h-5" />
               </a>
               <a href={`mailto:${portfolioData.contact.email}`} className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-200">
-                <i className="fas fa-envelope"></i>
+                <Mail className="w-5 h-5" />
               </a>
             </div>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">{t('footer.navigation')}</h4>
             <ul className="space-y-2">
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection('home')}
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
@@ -50,7 +51,7 @@ export const Footer = () => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection('about')}
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
@@ -58,7 +59,7 @@ export const Footer = () => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection('skills')}
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
@@ -66,7 +67,7 @@ export const Footer = () => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection('projects')}
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
@@ -74,7 +75,7 @@ export const Footer = () => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection('contact')}
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
@@ -83,26 +84,26 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">{t('footer.contact')}</h4>
             <div className="space-y-2 text-gray-400">
               <p className="flex items-center">
-                <i className="fas fa-envelope mr-2"></i>
+                <Mail className="mr-2 w-4 h-4" />
                 {portfolioData.contact.email}
               </p>
               <p className="flex items-center">
-                <i className="fas fa-phone mr-2"></i>
+                <Phone className="mr-2 w-4 h-4" />
                 {portfolioData.contact.phone}
               </p>
               <p className="flex items-center">
-                <i className="fas fa-map-marker-alt mr-2"></i>
+                <MapPin className="mr-2 w-4 h-4" />
                 {portfolioData.contact.location}
               </p>
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2024 {portfolioData.personalInfo.name}. {t('footer.rights')}</p>
           <p className="mt-2 text-sm">{t('footer.made')}</p>

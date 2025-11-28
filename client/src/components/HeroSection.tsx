@@ -1,5 +1,6 @@
-import { portfolioData } from '../data/portfolio-data';
 import { useLanguage } from '../hooks/useLanguage';
+import { portfolioData } from '../data/portfolio-data';
+import { motion } from 'framer-motion';
 
 export const HeroSection = () => {
   const { t, resolveLanguage } = useLanguage();
@@ -15,7 +16,12 @@ export const HeroSection = () => {
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 px-4 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-center lg:text-left animate-fade-in-up">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center lg:text-left"
+          >
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
                 {t('hero.greeting')}
@@ -60,9 +66,14 @@ export const HeroSection = () => {
                 <i className="fas fa-envelope text-xl text-gray-700 dark:text-gray-300"></i>
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex justify-center lg:justify-end animate-fade-in">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex justify-center lg:justify-end"
+          >
             <div className="relative">
               {/* Professional Photo */}
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white dark:border-gray-700 transform hover:scale-105 transition-transform duration-300">
@@ -82,7 +93,7 @@ export const HeroSection = () => {
                 <i className="fas fa-graduation-cap text-white text-xl"></i>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

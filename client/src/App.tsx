@@ -7,6 +7,8 @@ import { LanguageProvider } from "./hooks/LanguageContext";
 import Portfolio from "@/pages/portfolio";
 import NotFound from "@/pages/not-found";
 
+import { BackToTop } from "./components/BackToTop";
+
 function Router() {
   return (
     <Switch>
@@ -23,6 +25,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <BackToTop />
         </TooltipProvider>
       </LanguageProvider>
     </QueryClientProvider>

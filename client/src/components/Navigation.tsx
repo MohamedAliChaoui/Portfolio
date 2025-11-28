@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useTheme } from './ThemeProvider';
 import { useLanguage } from '../hooks/useLanguage';
 import logo from '@assets/logo.jpg';
+import { Menu, X, Sun, Moon } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,36 +43,15 @@ export const Navigation = () => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-8">
-            <button
-              onClick={() => scrollToSection('home')}
-              className="hover:text-primary transition-colors duration-200"
-            >
-              {t('nav.home')}
-            </button>
-            <button
-              onClick={() => scrollToSection('about')}
-              className="hover:text-primary transition-colors duration-200"
-            >
-              {t('nav.about')}
-            </button>
-            <button
-              onClick={() => scrollToSection('skills')}
-              className="hover:text-primary transition-colors duration-200"
-            >
-              {t('nav.skills')}
-            </button>
-            <button
-              onClick={() => scrollToSection('projects')}
-              className="hover:text-primary transition-colors duration-200"
-            >
-              {t('nav.projects')}
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="hover:text-primary transition-colors duration-200"
-            >
-              {t('nav.contact')}
-            </button>
+            {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
+              <button
+                key={item}
+                onClick={() => scrollToSection(item)}
+                className="hover:text-primary transition-colors duration-200 capitalize"
+              >
+                {t(`nav.${item}`)}
+              </button>
+            ))}
           </div>
 
           {/* Controls */}
@@ -86,59 +67,45 @@ export const Navigation = () => {
             {/* Dark Mode Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-3 rounded-lg bg-primary/10 hover:bg-primary/20 dark:bg-secondary/10 dark:hover:bg-secondary/20 transition-all duration-200 shadow-sm border border-primary/20 dark:border-secondary/20"
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
             >
-              <i className={`fas ${theme === 'dark' ? 'fa-sun text-yellow-500 text-lg' : 'fa-moon text-primary text-lg'}`}></i>
+              {theme === 'dark' ? <Sun className="w-5 h-5 text-yellow-500" /> : <Moon className="w-5 h-5 text-primary" />}
             </button>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2"
+              className="md:hidden p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
             >
-              <i className="fas fa-bars"></i>
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
-          <div className="px-4 py-2 space-y-2">
-            <button
-              onClick={() => scrollToSection('home')}
-              className="block w-full text-left py-2 hover:text-primary transition-colors duration-200"
-            >
-              {t('nav.home')}
-            </button>
-            <button
-              onClick={() => scrollToSection('about')}
-              className="block w-full text-left py-2 hover:text-primary transition-colors duration-200"
-            >
-              {t('nav.about')}
-            </button>
-            <button
-              onClick={() => scrollToSection('skills')}
-              className="block w-full text-left py-2 hover:text-primary transition-colors duration-200"
-            >
-              {t('nav.skills')}
-            </button>
-            <button
-              onClick={() => scrollToSection('projects')}
-              className="block w-full text-left py-2 hover:text-primary transition-colors duration-200"
-            >
-              {t('nav.projects')}
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="block w-full text-left py-2 hover:text-primary transition-colors duration-200"
-            >
-              {t('nav.contact')}
-            </button>
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 overflow-hidden"
+          >
+            <div className="px-4 py-2 space-y-2">
+              {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
+                <button
+                  key={item}
+                  onClick={() => scrollToSection(item)}
+                  className="block w-full text-left py-2 hover:text-primary transition-colors duration-200 capitalize"
+                >
+                  {t(`nav.${item}`)}
+                </button>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

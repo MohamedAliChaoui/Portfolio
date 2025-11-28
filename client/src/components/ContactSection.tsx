@@ -3,6 +3,8 @@ import { portfolioData } from '../data/portfolio-data';
 import { useLanguage } from '../hooks/useLanguage';
 import { useToast } from '../hooks/use-toast';
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin, Linkedin, Circle, Send, Loader2 } from 'lucide-react';
 
 export const ContactSection = () => {
   const { t } = useLanguage();
@@ -36,7 +38,7 @@ export const ContactSection = () => {
       // Tentative d'envoi via EmailJS
       try {
         await emailjs.send(serviceId, templateId, templateParams, publicKey);
-        
+
         toast({
           title: "Message envoyé !",
           description: "Votre message a été envoyé avec succès. Je vous répondrai rapidement.",
@@ -91,42 +93,54 @@ export const ContactSection = () => {
   return (
     <section id="contact" className="py-20 px-4 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('contact.title')}</h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             {t('contact.subtitle')}
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="space-y-8"
+          >
             <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg">
               <h3 className="text-xl font-semibold mb-6">{t('contact.info')}</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <i className="fas fa-envelope text-primary text-xl"></i>
+                    <Mail className="text-primary w-6 h-6" />
                   </div>
                   <div>
                     <h4 className="font-medium">Email</h4>
                     <p className="text-gray-600 dark:text-gray-400">{portfolioData.contact.email}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <i className="fas fa-phone text-primary text-xl"></i>
+                    <Phone className="text-primary w-6 h-6" />
                   </div>
                   <div>
                     <h4 className="font-medium">Téléphone</h4>
                     <p className="text-gray-600 dark:text-gray-400">{portfolioData.contact.phone}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <i className="fas fa-map-marker-alt text-primary text-xl"></i>
+                    <MapPin className="text-primary w-6 h-6" />
                   </div>
                   <div>
                     <h4 className="font-medium">Localisation</h4>
@@ -136,7 +150,7 @@ export const ContactSection = () => {
 
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <i className="fab fa-linkedin text-primary text-xl"></i>
+                    <Linkedin className="text-primary w-6 h-6" />
                   </div>
                   <div>
                     <h4 className="font-medium">LinkedIn</h4>
@@ -152,14 +166,20 @@ export const ContactSection = () => {
                 {t('about.availability.text')}
               </p>
               <div className="flex items-center space-x-2 text-accent">
-                <i className="fas fa-circle text-xs"></i>
+                <Circle className="w-3 h-3 fill-current" />
                 <span className="font-medium">{t('about.available')}</span>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Contact Form */}
-          <div className="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg">
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg"
+          >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -191,7 +211,7 @@ export const ContactSection = () => {
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium mb-2">
                   {t('contact.form.subject')}
@@ -206,7 +226,7 @@ export const ContactSection = () => {
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-800 dark:text-white transition-colors duration-200"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2">
                   {t('contact.form.message')}
@@ -222,7 +242,7 @@ export const ContactSection = () => {
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-800 dark:text-white transition-colors duration-200 resize-none"
                 ></textarea>
               </div>
-              
+
               <button
                 type="submit"
                 disabled={isSubmitting}
@@ -230,18 +250,18 @@ export const ContactSection = () => {
               >
                 {isSubmitting ? (
                   <>
-                    <i className="fas fa-spinner fa-spin mr-2"></i>
+                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
                     Envoi en cours...
                   </>
                 ) : (
                   <>
-                    <i className="fas fa-paper-plane mr-2"></i>
+                    <Send className="mr-2 h-5 w-5" />
                     {t('contact.form.send')}
                   </>
                 )}
               </button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
