@@ -2,7 +2,7 @@ import { portfolioData } from '../data/portfolio-data';
 import { useLanguage } from '../hooks/useLanguage';
 
 export const ProjectsSection = () => {
-  const { t } = useLanguage();
+  const { t, resolveLanguage } = useLanguage();
 
   const getTechColor = (tech: string) => {
     const colorMap: { [key: string]: string } = {
@@ -46,13 +46,13 @@ export const ProjectsSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolioData.projects.map((project) => (
-            <div 
+            <div
               key={project.id}
               className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
-              <img 
-                src={project.image} 
-                alt={project.title}
+              <img
+                src={project.image}
+                alt={resolveLanguage(project.title)}
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
@@ -62,13 +62,13 @@ export const ProjectsSection = () => {
                   </span>
                   <i className={`${project.icon} text-primary text-xl`}></i>
                 </div>
-                <h3 className="text-xl font-bold mb-3">{project.title}</h3>
+                <h3 className="text-xl font-bold mb-3">{resolveLanguage(project.title)}</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  {project.description}
+                  {resolveLanguage(project.description)}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, index) => (
-                    <span 
+                    <span
                       key={index}
                       className={`px-2 py-1 text-xs rounded ${getTechColor(tech)}`}
                     >
@@ -77,15 +77,15 @@ export const ProjectsSection = () => {
                   ))}
                 </div>
                 <div className="grid grid-cols-2 gap-3">
-                  <a 
-                    href={project.githubUrl || "#"} 
+                  <a
+                    href={project.githubUrl || "#"}
                     className="inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-secondary text-white text-sm rounded-lg transition-colors duration-200 min-h-[40px]"
                   >
                     <i className="fab fa-github mr-2"></i>
                     {t('projects.github')}
                   </a>
-                  <a 
-                    href={project.demoUrl || "#"} 
+                  <a
+                    href={project.demoUrl || "#"}
                     className="inline-flex items-center justify-center px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-white text-sm rounded-lg transition-colors duration-200 min-h-[40px]"
                   >
                     <i className="fas fa-external-link-alt mr-2"></i>
@@ -102,7 +102,7 @@ export const ProjectsSection = () => {
           <div className="bg-gradient-to-r from-primary to-secondary p-8 rounded-2xl inline-block shadow-xl">
             <h3 className="text-2xl font-bold text-white mb-4">{t('projects.cv.title')}</h3>
             <p className="text-blue-100 mb-6">{t('projects.cv.description')}</p>
-            <button 
+            <button
               onClick={downloadCV}
               className="inline-flex items-center px-8 py-4 bg-white text-primary hover:bg-gray-100 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg"
             >

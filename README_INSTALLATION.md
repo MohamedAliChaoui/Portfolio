@@ -13,21 +13,17 @@ Avant d'installer le projet, assurez-vous d'avoir installé :
 
 ## Installation
 
-1. **Décompresser l'archive**
-   ```bash
-   tar -xzf mohamed-ali-portfolio.tar.gz
-   cd workspace
-   ```
-
-2. **Installer les dépendances**
+1. **Installer les dépendances**
    ```bash
    npm install
    ```
+   *Note : Cela installera toutes les librairies nécessaires, y compris `cross-env` pour la compatibilité Windows.*
 
-3. **Lancer le projet en mode développement**
+2. **Lancer le projet en mode développement**
    ```bash
    npm run dev
    ```
+   *Le serveur démarrera sur le port 5000.*
 
 4. **Ouvrir dans le navigateur**
    - Ouvrez http://localhost:5000 dans votre navigateur

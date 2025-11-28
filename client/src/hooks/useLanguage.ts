@@ -1,26 +1,12 @@
-import { useState, useCallback } from 'react';
-import { Language, Translations } from '../types/portfolio';
-import { translations } from '../data/portfolio-data';
+import { useContext } from 'react';
+import { LanguageContext } from './LanguageContext';
 
 export const useLanguage = () => {
-  const [currentLanguage, setCurrentLanguage] = useState<Language>('fr');
+  const context = useContext(LanguageContext);
 
-  const toggleLanguage = useCallback(() => {
-    setCurrentLanguage(prev => prev === 'fr' ? 'en' : 'fr');
-  }, []);
+  if (context === undefined) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
 
-  const t = useCallback((key: string): string => {
-    const translation = translations[key];
-    if (!translation) {
-      console.warn(`Translation missing for key: ${key}`);
-      return key;
-    }
-    return translation[currentLanguage] || key;
-  }, [currentLanguage]);
-
-  return {
-    currentLanguage,
-    toggleLanguage,
-    t
-  };
+  return context;
 };

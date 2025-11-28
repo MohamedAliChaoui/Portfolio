@@ -1,3 +1,5 @@
+export type LocalizedContent = string | { fr: string; en: string };
+
 export interface Skill {
   name: string;
   level: number;
@@ -7,9 +9,9 @@ export interface Skill {
 
 export interface Project {
   id: string;
-  title: string;
+  title: LocalizedContent;
   year: string;
-  description: string;
+  description: LocalizedContent;
   technologies: string[];
   image: string;
   githubUrl?: string;
@@ -26,42 +28,42 @@ export interface ContactInfo {
 }
 
 export interface Education {
-  degree: string;
-  institution: string;
-  period: string;
+  degree: LocalizedContent;
+  institution: LocalizedContent;
+  period: LocalizedContent;
   location?: string;
 }
 
 export interface LanguageInfo {
-  name: string;
-  level: string;
+  name: LocalizedContent;
+  level: LocalizedContent;
   flag?: string;
 }
 
 export interface Certification {
-  name: string;
+  name: LocalizedContent;
   issuer: string;
   date: string;
-  level?: string;
+  level?: LocalizedContent;
 }
 
 export interface Experience {
-  position: string;
+  position: LocalizedContent;
   company: string;
-  period: string;
-  description: string;
+  period: LocalizedContent;
+  description: LocalizedContent;
 }
 
 export interface PortfolioData {
   personalInfo: {
     name: string;
-    title: string;
-    description: string;
+    title: LocalizedContent;
+    description: LocalizedContent;
     photo: string;
   };
   about: {
-    description: string;
-    qualities: string[];
+    description: LocalizedContent;
+    qualities: LocalizedContent[];
     experiences: Experience[];
     education: Education[];
     languages: LanguageInfo[];

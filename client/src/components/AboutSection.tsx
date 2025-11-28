@@ -2,7 +2,7 @@ import { portfolioData } from '../data/portfolio-data';
 import { useLanguage } from '../hooks/useLanguage';
 
 export const AboutSection = () => {
-  const { t } = useLanguage();
+  const { t, resolveLanguage } = useLanguage();
 
   const downloadCV = () => {
     // Create a link to the CV PDF from the attached assets
@@ -26,7 +26,7 @@ export const AboutSection = () => {
 
         <div className="mb-8">
           <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-            {t('about.description')}
+            {resolveLanguage(portfolioData.about.description)}
           </p>
         </div>
 
@@ -42,10 +42,10 @@ export const AboutSection = () => {
                   <div key={index} className="flex items-start space-x-3">
                     <div className="w-3 h-3 bg-secondary rounded-full mt-2"></div>
                     <div>
-                      <h4 className="font-medium">{exp.position}</h4>
+                      <h4 className="font-medium">{resolveLanguage(exp.position)}</h4>
                       <p className="text-primary font-medium">{exp.company}</p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">{exp.period}</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{exp.description}</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">{resolveLanguage(exp.period)}</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{resolveLanguage(exp.description)}</p>
                     </div>
                   </div>
                 ))}
@@ -62,8 +62,8 @@ export const AboutSection = () => {
                   <div key={index} className="flex items-start space-x-3">
                     <div className="w-3 h-3 bg-primary rounded-full mt-2"></div>
                     <div>
-                      <h4 className="font-medium">{edu.degree}</h4>
-                      <p className="text-gray-600 dark:text-gray-400">{edu.institution} ({edu.period})</p>
+                      <h4 className="font-medium">{resolveLanguage(edu.degree)}</h4>
+                      <p className="text-gray-600 dark:text-gray-400">{resolveLanguage(edu.institution)} ({resolveLanguage(edu.period)})</p>
                     </div>
                   </div>
                 ))}
@@ -78,8 +78,8 @@ export const AboutSection = () => {
               <div className="space-y-3">
                 {portfolioData.about.languages.map((lang, index) => (
                   <div key={index} className="flex justify-between items-center p-3 bg-white dark:bg-gray-700 rounded-lg">
-                    <p className="font-medium text-lg">{lang.name}</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-600 px-3 py-1 rounded-full">{lang.level}</p>
+                    <p className="font-medium text-lg">{resolveLanguage(lang.name)}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-600 px-3 py-1 rounded-full">{resolveLanguage(lang.level)}</p>
                   </div>
                 ))}
               </div>
@@ -93,7 +93,7 @@ export const AboutSection = () => {
                 {portfolioData.about.qualities.map((quality, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <i className="fas fa-check-circle text-primary"></i>
-                    <span>{quality}</span>
+                    <span>{resolveLanguage(quality)}</span>
                   </div>
                 ))}
               </div>
@@ -105,9 +105,9 @@ export const AboutSection = () => {
                 <div key={index} className="flex items-center space-x-3 p-3 bg-white dark:bg-gray-700 rounded-lg">
                   <i className="fas fa-certificate text-accent text-xl"></i>
                   <div>
-                    <h4 className="font-medium">{cert.name}</h4>
+                    <h4 className="font-medium">{resolveLanguage(cert.name)}</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      {cert.level} - {cert.date}
+                      {resolveLanguage(cert.level!)} - {cert.date}
                     </p>
                   </div>
                 </div>
@@ -126,7 +126,7 @@ export const AboutSection = () => {
             </div>
 
             <div className="text-center">
-              <button 
+              <button
                 onClick={downloadCV}
                 className="inline-flex items-center px-6 py-3 bg-primary hover:bg-secondary text-white rounded-lg font-medium transition-all duration-200 shadow-lg"
               >

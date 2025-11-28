@@ -2,7 +2,7 @@ import { portfolioData } from '../data/portfolio-data';
 import { useLanguage } from '../hooks/useLanguage';
 
 export const HeroSection = () => {
-  const { t } = useLanguage();
+  const { t, resolveLanguage } = useLanguage();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -24,22 +24,22 @@ export const HeroSection = () => {
                 {portfolioData.personalInfo.name}
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6">
-                {t('hero.title')}
+                {resolveLanguage(portfolioData.personalInfo.title)}
               </p>
               <p className="text-lg text-gray-500 dark:text-gray-400 mb-8 max-w-lg mx-auto lg:mx-0">
-                {t('hero.description')}
+                {resolveLanguage(portfolioData.personalInfo.description)}
               </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button 
+              <button
                 onClick={() => scrollToSection('projects')}
                 className="inline-flex items-center px-6 py-3 bg-primary hover:bg-secondary text-white rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg"
               >
                 <i className="fas fa-rocket mr-2"></i>
                 {t('hero.cta.projects')}
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('contact')}
                 className="inline-flex items-center px-6 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-lg font-medium transition-all duration-200"
               >
@@ -66,18 +66,18 @@ export const HeroSection = () => {
             <div className="relative">
               {/* Professional Photo */}
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white dark:border-gray-700 transform hover:scale-105 transition-transform duration-300">
-                <img 
-                  src={portfolioData.personalInfo.photo} 
-                  alt={portfolioData.personalInfo.name} 
+                <img
+                  src={portfolioData.personalInfo.photo}
+                  alt={portfolioData.personalInfo.name}
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               {/* Floating Elements */}
               <div className="absolute -top-4 -right-4 w-20 h-20 bg-accent rounded-full flex items-center justify-center shadow-lg animate-bounce-slow">
                 <i className="fas fa-laptop-code text-white text-2xl"></i>
               </div>
-              
+
               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-secondary rounded-full flex items-center justify-center shadow-lg animate-pulse">
                 <i className="fas fa-graduation-cap text-white text-xl"></i>
               </div>
