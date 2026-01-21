@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTheme } from './ThemeProvider';
 import { useLanguage } from '../hooks/useLanguage';
 import logo from '@assets/logo.jpg';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon, BrainCircuit } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const Navigation = () => {
@@ -29,15 +29,11 @@ export const Navigation = () => {
           {/* Logo MAC */}
           <div className="flex items-center space-x-3">
             <div className="relative">
-              <img
-                src={logo}
-                alt="Logo"
-                className="w-16 h-8 object-contain transform hover:scale-110 transition-transform duration-300"
-              />
+              <BrainCircuit className="w-10 h-10 text-primary animate-pulse" />
             </div>
             <div className="hidden sm:block">
               <h3 className="font-semibold text-gray-900 dark:text-white">Mohamed Ali Chaoui</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Full-Stack Developer</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Student in AI & Data Science</p>
             </div>
           </div>
 

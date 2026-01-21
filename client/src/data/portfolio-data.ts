@@ -5,62 +5,63 @@ export const portfolioData: PortfolioData = {
   personalInfo: {
     name: "Mohamed Ali Chaoui",
     title: {
-      fr: "Étudiant en Master Informatique à Bordeaux",
-      en: "Master's Computer Science Student in Bordeaux"
+      fr: "Étudiant en Master IA & Data Science | Ex-Fullstack Dev",
+      en: "Master's Student in AI & Data Science | Ex-Fullstack Dev"
     },
     description: {
-      fr: "Curieux, rigoureux et passionné par les technologies. Développeur full-stack en devenir avec une solide base en informatique.",
-      en: "Curious, rigorous and passionate about technology. Aspiring full-stack developer with a solid foundation in computer science."
+      fr: "Passionné par l'Intelligence Artificielle et l'Ingénierie Logicielle. Je combine une solide expertise Fullstack avec des compétences avancées en Machine Learning et Algorithmique.",
+      en: "Passionate about Artificial Intelligence and Software Engineering. I combine strong Fullstack expertise with advanced skills in Machine Learning and Algorithms."
     },
     photo: profilePhoto
   },
   about: {
     description: {
-      fr: "Titulaire d'une licence en informatique, je poursuis actuellement mes études en première année de master à l'Université de Bordeaux. Curieux, adaptable et motivé par les défis intellectuels, j'apprécie particulièrement le travail en équipe. Soucieux de développer mon expertise, je suis pleinement engagé dans l'approfondissement de mes compétences et prêt à relever de nouveaux projets ambitieux.",
-      en: "Holder of a Bachelor's degree in Computer Science, I am currently pursuing my Master's degree at the University of Bordeaux. Curious, adaptable and motivated by intellectual challenges, I enjoy teamwork. I am fully committed to deepening my skills and ready to take on ambitious new projects."
+      fr: "Étudiant en Master Informatique (spécialité IA) à l'Université de Bordeaux, je pivote d'un solide background en développement Fullstack vers l'Intelligence Artificielle et la Data Science. Mon parcours a débuté par une formation rigoureuse en ingénierie logicielle, où j'ai maîtrisé les architectures complexes (Vue.js, Spring Boot, PostgreSQL). Aujourd'hui, je mets cette discipline au service de la conception de systèmes intelligents, allant de la complexité algorithmique à la vision par ordinateur.",
+      en: "Master's student in Computer Science (AI specialization) at the University of Bordeaux, I am pivoting from a strong Fullstack development background to Artificial Intelligence and Data Science. My journey began with rigorous software engineering training, where I mastered complex architectures (Vue.js, Spring Boot, PostgreSQL). Today, I perform this discipline to design intelligent systems, ranging from algorithmic complexity to computer vision."
     },
     qualities: [
-      { fr: "Communication", en: "Communication" },
-      { fr: "Esprit d'équipe", en: "Teamwork" },
-      { fr: "Organisation", en: "Organization" },
-      { fr: "Gestion des tâches", en: "Task Management" },
+      { fr: "Rigueur Scientifique", en: "Scientific Rigor" },
+      { fr: "Résolution de problèmes", en: "Problem Solving" },
+      { fr: "Travail d'équipe", en: "Teamwork" },
+      { fr: "Curiosité Technique", en: "Technical Curiosity" },
       { fr: "Adaptabilité", en: "Adaptability" },
-      { fr: "Motivation", en: "Motivation" }
+      { fr: "Autonomie", en: "Autonomy" }
     ],
     experiences: [
       {
         position: { fr: "Equipier de commerce", en: "Sales Associate" },
         company: "AUCHAN",
         period: { fr: "Août 2024 - Présent", en: "August 2024 - Present" },
-        description: { fr: "Accueil client, gestion des stocks et support commercial", en: "Customer service, stock management and commercial support" }
+        description: {
+          fr: "Accueil client, conseil personnalisé, gestion des stocks et mise en rayon efficace dans un environnement dynamique.",
+          en: "Customer reception, personalized advice, stock management and efficient shelving in a dynamic environment."
+        }
       },
       {
         position: { fr: "Expert en inventaire", en: "Inventory Expert" },
         company: "RGIS",
         period: { fr: "Novembre 2021 - Juin 2024", en: "November 2021 - June 2024" },
-        description: { fr: "Réalisation d'inventaires précis et gestion des données", en: "Precise inventory execution and data management" }
+        description: {
+          fr: "Réalisation d'inventaires précis pour professionnels, utilisation d'outils de comptage électroniques et respect des délais.",
+          en: "Precise inventory execution for professionals, use of electronic counting tools and adherence to deadlines."
+        }
       }
     ],
     education: [
       {
-        degree: { fr: "Master 1 - Université de Bordeaux", en: "Master 1 - University of Bordeaux" },
-        institution: { fr: "Informatique", en: "Computer Science" },
-        period: { fr: "Septembre 2025 – Juin 2026", en: "September 2025 – June 2026" }
+        degree: { fr: "Master 1 - Informatique (IA)", en: "Master 1 - Computer Science (AI)" },
+        institution: { fr: "Université de Bordeaux", en: "University of Bordeaux" },
+        period: { fr: "Septembre 2025 – Juin 2027", en: "September 2025 – June 2027" }
       },
       {
-        degree: { fr: "Licence 3 - Université de Bordeaux", en: "Bachelor 3 - University of Bordeaux" },
-        institution: { fr: "Informatique", en: "Computer Science" },
+        degree: { fr: "Licence 3 - Informatique", en: "Bachelor 3 - Computer Science" },
+        institution: { fr: "Université de Bordeaux", en: "University of Bordeaux" },
         period: { fr: "Septembre 2024 – Juin 2025", en: "September 2024 – June 2025" }
       },
       {
-        degree: { fr: "Licence 1 et 2 - Université d'Avignon", en: "Bachelor 1 & 2 - University of Avignon" },
-        institution: { fr: "Informatique", en: "Computer Science" },
+        degree: { fr: "Licence 1 et 2 - Informatique", en: "Bachelor 1 & 2 - Computer Science" },
+        institution: { fr: "Université d'Avignon", en: "University of Avignon" },
         period: { fr: "Septembre 2020 – Juin 2024", en: "September 2020 – June 2024" }
-      },
-      {
-        degree: { fr: "Baccalauréat Science Physique et Chimie", en: "Baccalaureate Physics and Chemistry" },
-        institution: "Fès, Maroc",
-        period: { fr: "Septembre 2019 – Juin 2020", en: "September 2019 – June 2020" }
       }
     ],
     languages: [
@@ -79,87 +80,64 @@ export const portfolioData: PortfolioData = {
   },
   skills: {
     programming: [
+      { name: "Python (Data/IA)", level: 90, icon: "devicon-python-plain colored", color: "#3776ab" },
       { name: "C/C++", level: 90, icon: "devicon-cplusplus-plain colored", color: "#00599c" },
       { name: "Java", level: 90, icon: "devicon-java-plain colored", color: "#f89820" },
-      { name: "PHP", level: 85, icon: "devicon-php-plain colored", color: "#777bb4" },
-      { name: "Python", level: 85, icon: "devicon-python-plain colored", color: "#3776ab" },
-      { name: "OCaml", level: 80, icon: "fas fa-code", color: "#ec6813" },
-      { name: "JavaScript", level: 80, icon: "devicon-javascript-plain colored", color: "#f7df1e" },
-      { name: "HTML/CSS", level: 85, icon: "devicon-html5-plain colored", color: "#e34f26" },
-      { name: "Julia", level: 70, icon: "fas fa-calculator", color: "#9558b2" },
-      { name: "Coq", level: 65, icon: "fas fa-cogs", color: "#d2691e" }
+      { name: "SQL", level: 85, icon: "fas fa-database", color: "#e34f26" },
+      { name: "JavaScript/TS", level: 80, icon: "devicon-typescript-plain colored", color: "#007acc" },
+      { name: "OCaml", level: 75, icon: "fas fa-code", color: "#ec6813" }
     ],
     frameworks: [
+      { name: "PyTorch", level: 80, icon: "devicon-pytorch-original colored", color: "#ee4c2c" },
+      { name: "Scikit-learn", level: 80, icon: "devicon-scikitlearn-plain colored", color: "#f7931e" },
       { name: "Spring Boot", level: 85, icon: "devicon-spring-plain colored", color: "#6db33f" },
-      { name: "Vue.js", level: 85, icon: "devicon-vuejs-plain colored", color: "#4fc08d" },
-      { name: "Vite", level: 80, icon: "fas fa-bolt", color: "#ffd62e" },
-      { name: "Shell scripting", level: 75, icon: "devicon-bash-plain colored", color: "#4eaa25" },
-      { name: "jQuery", level: 70, icon: "devicon-jquery-plain colored", color: "#0769ad" }
+      { name: "Vue.js", level: 80, icon: "devicon-vuejs-plain colored", color: "#4fc08d" },
+      { name: "Pandas/NumPy", level: 85, icon: "devicon-pandas-plain colored", color: "#150458" }
     ],
     databases: [
+      { name: "PostgreSQL (+pgvector)", level: 85, icon: "devicon-postgresql-plain colored", color: "#336791" },
       { name: "MySQL", level: 90, icon: "devicon-mysql-plain colored", color: "#4479a1" },
-      { name: "PostgreSQL", level: 85, icon: "devicon-postgresql-plain colored", color: "#336791" },
-      { name: "PL/SQL", level: 80, icon: "fas fa-database", color: "#ff6600" },
-      { name: "Linux/Ubuntu Server", level: 80, icon: "devicon-linux-plain colored", color: "#fcc624" },
-      { name: "Windows Server", level: 75, icon: "devicon-windows8-original colored", color: "#0078d4" },
-      { name: "VMware", level: 70, icon: "fas fa-server", color: "#607078" },
-      { name: "Cisco (VLAN, Routing)", level: 75, icon: "fas fa-network-wired", color: "#1ba0d7" }
+      { name: "Git/GitLab CI", level: 85, icon: "devicon-git-plain colored", color: "#f05032" },
+      { name: "Docker", level: 75, icon: "devicon-docker-plain colored", color: "#2496ed" },
+      { name: "Linux", level: 80, icon: "devicon-linux-plain colored", color: "#fcc624" }
     ]
   },
   projects: [
     {
-      id: "1",
-      title: { fr: "Application client-serveur", en: "Client-Server Application" },
-      year: "2023",
-      description: { fr: "Développement d'un système client-serveur de recherche d'images par similarité, avec API REST, indexation pgvector, interface Vue.js et CI/CD GitLab.", en: "Development of a client-server system for image similarity search, with REST API, pgvector indexing, Vue.js interface and GitLab CI/CD." },
-      technologies: ["Java", "Spring Boot", "PostgreSQL", "Vue.js", "GitLab CI/CD"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-      icon: "fas fa-server"
+      id: "p_algo_sat",
+      title: { fr: "Solveur Algorithmique (SAT)", en: "Algorithmic Solver (SAT)" },
+      year: "2025",
+      description: { fr: "Conception d'un solveur en C pour le problème NP-complet 'TUNNEL'. Réduction polynomiale vers SAT et optimisation de la gestion mémoire.", en: "Design of a C solver for the NP-complete 'TUNNEL' problem. Polynomial reduction to SAT and memory management optimization." },
+      technologies: ["C", "Algorithmique", "Complexité"],
+      image: "https://images.unsplash.com/photo-1509228468518-180dd4864904?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      icon: "fas fa-brain"
     },
     {
-      id: "2",
-      title: { fr: "Création d'un site web (myBike)", en: "Website Creation (myBike)" },
-      year: "2023",
-      description: { fr: "Développement d'un site de gestion de commandes pour un magasin de cyclisme.", en: "Development of an order management website for a cycling shop." },
-      technologies: ["PHP", "PDO"],
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-      icon: "fas fa-bicycle"
-    },
-    {
-      id: "3",
-      title: { fr: "Plate-forme de Monitoring", en: "Monitoring Platform" },
-      year: "2023",
-      description: { fr: "Surveillance de serveurs et gestion des alertes en lien avec le C.E.R.T., via Bash et Python.", en: "Server monitoring and alert management in connection with C.E.R.T., via Bash and Python." },
-      technologies: ["Bash", "Python"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-      icon: "fas fa-chart-line"
-    },
-    {
-      id: "4",
-      title: { fr: "Création d'un site web (Blog)", en: "Website Creation (Blog)" },
-      year: "2022",
-      description: { fr: "Développement d'un site interactif permettant aux utilisateurs de rechercher, publier et commenter des articles.", en: "Development of an interactive site allowing users to search, publish and comment on articles." },
-      technologies: ["HTML", "CSS", "JavaScript", "PHP"],
-      image: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-      icon: "fas fa-blog"
-    },
-    {
-      id: "5",
-      title: { fr: "Démineur en C++", en: "Minesweeper in C++" },
-      year: "2020/2022",
-      description: { fr: "Développement du jeu en Python et en C++ en appliquant la programmation orientée objet.", en: "Development of the game in Python and C++ applying object-oriented programming." },
-      technologies: ["C++", "Python"],
-      image: "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      id: "p_engine_mvc",
+      title: { fr: "Moteur de Jeu & Architecture", en: "Game Engine & Architecture" },
+      year: "2025",
+      description: { fr: "Développement d'un moteur de jeu RPG en Java avec une architecture MVC stricte et Design Patterns (Observer, Strategy).", en: "Development of an RPG game engine in Java with strict MVC architecture and Design Patterns (Observer, Strategy)." },
+      technologies: ["Java", "Swing", "Design Patterns"],
+      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       icon: "fas fa-gamepad"
     },
     {
-      id: "6",
-      title: { fr: "Compression et décompression de Fichiers", en: "File Compression and Decompression" },
-      year: "2021",
-      description: { fr: "Implémentation d'un algorithme permettant la compression et la réversibilité des fichiers texte.", en: "Implementation of an algorithm allowing compression and reversibility of text files." },
-      technologies: ["C"],
-      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-      icon: "fas fa-file-archive"
+      id: "p_img_search",
+      title: { fr: "Recherche d'Images Distribuée", en: "Distributed Image Search" },
+      year: "2023",
+      description: { fr: "Système de recherche d'images par similarité utilisant pgvector pour l'indexation vectorielle. Architecture micro-services.", en: "Image similarity search system using pgvector for vector indexing. Micro-services architecture." },
+      technologies: ["PostgreSQL", "pgvector", "Spring Boot", "Vue.js"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      icon: "fas fa-search"
+    },
+    {
+      id: "p_monitoring",
+      title: { fr: "Plate-forme de Monitoring", en: "Monitoring Platform" },
+      year: "2023",
+      description: { fr: "Outil de surveillance serveur et alerting automatique développé en Python et Bash.", en: "Server monitoring and automatic alerting tool developed in Python and Bash." },
+      technologies: ["Python", "Bash", "System Admin"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      icon: "fas fa-chart-line"
     }
   ],
   contact: {
@@ -181,54 +159,54 @@ export const translations: Translations = {
 
   // Hero Section
   'hero.greeting': { fr: '👋 Bonjour, je suis', en: '👋 Hello, I\'m' },
-  'hero.title': { fr: 'Étudiant en Master Informatique à Bordeaux', en: 'Master\'s Computer Science Student in Bordeaux' },
-  'hero.description': { fr: 'Curieux, rigoureux et passionné par les technologies. Développeur full-stack en devenir avec une solide base en informatique.', en: 'Curious, rigorous and passionate about technology. Aspiring full-stack developer with a solid foundation in computer science.' },
+  'hero.title': { fr: 'Étudiant Master IA & Data Science', en: 'Master\'s Student in AI & Data Science' },
+  'hero.description': { fr: 'Passionné par l\'Intelligence Artificielle et l\'Ingénierie Logicielle. Je combine une solide expertise Fullstack avec des compétences avancées en Machine Learning et Algorithmique pour résoudre des problèmes complexes.', en: 'Passionate about Artificial Intelligence and Software Engineering. I combine strong Fullstack expertise with advanced skills in Machine Learning and Algorithms to solve complex problems.' },
   'hero.cta.projects': { fr: 'Voir mes projets', en: 'View Projects' },
   'hero.cta.contact': { fr: 'Me contacter', en: 'Contact Me' },
 
   // About Section
   'about.title': { fr: 'À propos de moi', en: 'About Me' },
-  'about.subtitle': { fr: 'Découvrez mon parcours et mes motivations dans le domaine de l\'informatique', en: 'Discover my journey and motivations in computer science' },
-  'about.description': { fr: 'Titulaire d\'une licence en informatique, je poursuis actuellement mes études en première année de master à l\'Université de Bordeaux. Curieux, adaptable et motivé par les défis intellectuels, j\'apprécie particulièrement le travail en équipe. Je suis pleinement engagé dans l\'approfondissement de mes compétences et prêt à relever de nouveaux projets ambitieux.', en: 'Holder of a Bachelor\'s degree in Computer Science, I am currently pursuing my Master\'s degree at the University of Bordeaux. Curious, adaptable and motivated by intellectual challenges, I enjoy teamwork. I am fully committed to deepening my skills and ready to take on ambitious new projects.' },
+  'about.subtitle': { fr: 'Du développement Fullstack vers l\'Intelligence Artificielle', en: 'From Fullstack Development to Artificial Intelligence' },
+  'about.description': { fr: 'Étudiant en Master Informatique (spécialité IA) à l\'Université de Bordeaux, je pivote d\'un solide background en développement Fullstack vers l\'Intelligence Artificielle et la Data Science. Mon parcours a débuté par une formation rigoureuse en ingénierie logicielle, où j\'ai maîtrisé les architectures complexes (Vue.js, Spring Boot, PostgreSQL). Aujourd\'hui, je mets cette discipline au service de la conception de systèmes intelligents, allant de la complexité algorithmique à la vision par ordinateur.', en: 'Master\'s student in Computer Science (AI specialization) at the University of Bordeaux, I am pivoting from a strong Fullstack development background to Artificial Intelligence and Data Science. My journey began with rigorous software engineering training, where I mastered complex architectures (Vue.js, Spring Boot, PostgreSQL). Today, I perform this discipline to design intelligent systems, ranging from algorithmic complexity to computer vision.' },
   'about.education': { fr: 'Parcours académique', en: 'Academic Background' },
   'about.languages': { fr: 'Langues', en: 'Languages' },
-  'about.qualities': { fr: 'Mes qualités personnelles', en: 'My Personal Qualities' },
+  'about.qualities': { fr: 'Mes qualités', en: 'My Qualities' },
   'about.certifications': { fr: 'Certifications', en: 'Certifications' },
   'about.availability': { fr: 'Disponibilité', en: 'Availability' },
-  'about.availability.text': { fr: 'Je suis actuellement à la recherche d\'opportunités de stage et d\'emploi dans le domaine du développement logiciel.', en: 'I am currently looking for internship and job opportunities in software development.' },
-  'about.available': { fr: 'Disponible pour de nouveaux projets', en: 'Available for new projects' },
+  'about.availability.text': { fr: 'Je suis à la recherche d\'un stage de 1 à 2 mois en Data Science / IA à partir de juin 2026.', en: 'I am looking for a 1-2 month internship in Data Science / AI starting June 2026.' },
+  'about.available': { fr: 'Recherche de stage (2026)', en: 'Looking for Internship (2026)' },
 
   // Skills Section
-  'skills.title': { fr: 'Compétences techniques', en: 'Technical Skills' },
-  'skills.subtitle': { fr: 'Un aperçu de mes connaissances et outils de développement', en: 'An overview of my knowledge and development tools' },
+  'skills.title': { fr: 'Compétences Techniques', en: 'Technical Skills' },
+  'skills.subtitle': { fr: 'Une expertise hybride entre Génie Logiciel et Intelligence Artificielle', en: 'Hybrid expertise between Software Engineering and Artificial Intelligence' },
   'skills.programming': { fr: 'Langages', en: 'Languages' },
-  'skills.frameworks': { fr: 'Frameworks & Outils', en: 'Frameworks & Tools' },
-  'skills.databases': { fr: 'Bases de données & Systèmes', en: 'Databases & Systems' },
+  'skills.frameworks': { fr: 'Frameworks IA & Web', en: 'AI & Web Frameworks' },
+  'skills.databases': { fr: 'Data & Infra', en: 'Data & Infra' },
 
   // Projects Section
-  'projects.title': { fr: 'Projets académiques', en: 'Academic Projects' },
-  'projects.subtitle': { fr: 'Découvrez quelques-uns de mes projets réalisés durant mon cursus universitaire', en: 'Discover some of my projects completed during my university studies' },
+  'projects.title': { fr: 'Projets Réalisés', en: 'Realized Projects' },
+  'projects.subtitle': { fr: 'Sélection de projets alliant algorithmique avancée et développement web', en: 'Selection of projects combining advanced algorithms and web development' },
   'projects.github': { fr: 'GitHub', en: 'GitHub' },
   'projects.demo': { fr: 'Demo', en: 'Demo' },
   'projects.cv.title': { fr: 'Téléchargez mon CV complet', en: 'Download my complete CV' },
-  'projects.cv.description': { fr: 'Découvrez l\'ensemble de mon parcours, mes expériences et mes réalisations', en: 'Discover my complete journey, experiences and achievements' },
+  'projects.cv.description': { fr: 'Retrouvez le détail de mon parcours académique et professionnel', en: 'Find details of my academic and professional background' },
   'projects.cv.download': { fr: 'Télécharger le CV (PDF)', en: 'Download CV (PDF)' },
 
   // Contact Section
   'contact.title': { fr: 'Contactez-moi', en: 'Contact Me' },
-  'contact.subtitle': { fr: 'N\'hésitez pas à me contacter pour discuter d\'opportunités ou de projets', en: 'Feel free to contact me to discuss opportunities or projects' },
+  'contact.subtitle': { fr: 'Ouvert aux opportunités en IA et Data Science', en: 'Open to opportunities in AI and Data Science' },
   'contact.info': { fr: 'Informations de contact', en: 'Contact Information' },
   'contact.form.name': { fr: 'Nom complet', en: 'Full Name' },
   'contact.form.email': { fr: 'Email', en: 'Email' },
   'contact.form.subject': { fr: 'Sujet', en: 'Subject' },
   'contact.form.message': { fr: 'Message', en: 'Message' },
-  'contact.form.placeholder': { fr: 'Décrivez votre projet ou votre demande...', en: 'Describe your project or request...' },
-  'contact.form.send': { fr: 'Envoyer le message', en: 'Send Message' },
+  'contact.form.placeholder': { fr: 'Votre message...', en: 'Your message...' },
+  'contact.form.send': { fr: 'Envoyer', en: 'Send' },
 
   // Footer
-  'footer.description': { fr: 'Étudiant en Master Informatique passionné par le développement full-stack et les nouvelles technologies.', en: 'Master\'s Computer Science student passionate about full-stack development and new technologies.' },
+  'footer.description': { fr: 'Étudiant en Master IA passionné par la Data Science et le Software Engineering.', en: 'Master\'s AI student passionate about Data Science and Software Engineering.' },
   'footer.navigation': { fr: 'Navigation', en: 'Navigation' },
   'footer.contact': { fr: 'Contact', en: 'Contact' },
   'footer.rights': { fr: 'Tous droits réservés.', en: 'All rights reserved.' },
-  'footer.made': { fr: 'Conçu avec ❤️ et React', en: 'Made with ❤️ and React' }
+  'footer.made': { fr: 'Conçu avec React & Tailwind', en: 'Made with React & Tailwind' }
 };
