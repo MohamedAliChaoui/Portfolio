@@ -23,16 +23,15 @@ export const ContactSection = () => {
 
     try {
       // Configuration EmailJS (les utilisateurs devront configurer leur propre service)
-      const serviceId = 'service_portfolio'; // À remplacer par votre service ID
-      const templateId = 'template_contact'; // À remplacer par votre template ID
-      const publicKey = 'your_public_key'; // À remplacer par votre clé publique
+      const serviceId = 'service_zzyc6lf';
+      const templateId = 'template_3ffo3nr';
+      const publicKey = 'as-wejFvrmiIoDoNtIW__';
 
       const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        subject: formData.subject,
+        name: formData.name,
+        email: formData.email,
+        title: formData.subject,
         message: formData.message,
-        to_email: 'ali.chaoui.123@gmail.com' // Email de destination
       };
 
       // Tentative d'envoi via EmailJS

@@ -1,0 +1,149 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=1.8cm, right=1.8cm, top=1.5cm, bottom=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usepackage{qrcode} % Nécessaire pour le QR Code
+
+% Couleurs et liens
+\definecolor{primary}{RGB}{0,70,140}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primary,
+    urlcolor=primary
+}
+
+% Mise en forme des titres
+\titleformat{\section}{\Large\bfseries\color{primary}}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+\begin{document}
+
+% HEADER
+\begin{minipage}[t]{0.72\textwidth}
+    \vspace{0pt}
+    {\Huge \textbf{Mohamed Ali Chaoui}} \\[5pt]
+    \href{mailto:ali.chaoui.123@gmail.com}{ali.chaoui.123@gmail.com} \,|\, +33 6 51 61 56 86 \,|\, Bordeaux, France \\[8pt]
+    
+    % Liens cliquables sur PDF et lisibles sur papier
+    \textbf{GitHub :} \href{https://github.com/MohamedAliChaoui}{github.com/MohamedAliChaoui} \\
+    \textbf{LinkedIn :} \href{https://www.linkedin.com/in/mohamed-ali-chaoui-25151b196}{linkedin.com/in/mohamed-ali-chaoui} \\
+    \textbf{Portfolio :} \href{https://portfolio-chaoui-mohamed-ali.vercel.app/}{portfolio-chaoui-mohamed-ali.vercel.app}
+\end{minipage}%
+\begin{minipage}[t]{0.25\textwidth}
+    \vspace{-20pt}
+    \begin{flushright}
+        % Photo de profil
+        \begin{tikzpicture}
+            \node[draw=gray, line width=0.5pt, circle, inner sep=0pt, minimum size=2.5cm, path picture={
+                \node at (path picture bounding box.center){
+                    \includegraphics[width=2.5cm]{Photo PRO.jpeg}
+                };
+            }] {};
+        \end{tikzpicture}
+        
+        \vspace{8pt}
+        
+        % QR Code vers le Portfolio (le plus utile à scanner)
+        \qrcode[height=2cm]{https://portfolio-chaoui-mohamed-ali.vercel.app/}
+        
+        \vspace{2pt}
+        {\tiny \textit{Scan : Mon Portfolio}}
+    \end{flushright}
+\end{minipage}
+
+% PROFIL
+\section*{Profil}
+Étudiant en \textbf{Master Informatique – Spécialité Intelligence Artificielle} à l’Université de Bordeaux, passionné par la \textbf{Data Science}, l’optimisation et l’ingénierie logicielle. J’aime concevoir des systèmes robustes alliant logique algorithmique, apprentissage automatique et développement full-stack. Je recherche un \textbf{stage de 1 à 3 mois à partir de mai 2026} en \textbf{Data Science / Machine Learning / Développement IA}.
+
+% FORMATION
+\section*{Formation}
+\textbf{Master 1 Informatique – Parcours Intelligence Artificielle} \hfill Sept. 2025 – Juin 2027 \\
+\textit{Université de Bordeaux}
+\begin{itemize}[leftmargin=*,noitemsep]
+    \item Machine Learning \& Deep Learning, raisonnement automatique, traitement d’images, analyse et classification de données, conception orientée objet et complexité algorithmique.
+\end{itemize}
+\textbf{Licence 3 Informatique} \hfill Sept. 2024 – Juin 2025 \\
+\textit{Université de Bordeaux}
+\begin{itemize}[leftmargin=*,noitemsep]
+    \item Algorithmique avancée (graphes, complexité), programmation fonctionnelle (OCaml), compilation, programmation système, logique formelle et projet de développement logiciel en équipe.
+\end{itemize}
+\textbf{Licence 1 et 2 Informatique} \hfill Sept. 2020 – Juin 2024 \\
+\textit{Université d’Avignon}
+\begin{itemize}[leftmargin=*,noitemsep]
+    \item Programmation impérative (C, Python), structures de données et algorithmique, bases de données relationnelles (SQL), réseaux informatiques et systèmes d’exploitation Linux/Windows, initiation au développement web.
+\end{itemize}
+
+% COMPÉTENCES
+\section*{Compétences Techniques}
+\begin{itemize}[leftmargin=*,noitemsep]
+    \item \textbf{IA \& Data Science :} Python (Pandas, NumPy, Scikit-learn, PyTorch), Algorithmique, Modélisation de données.
+    \item \textbf{Développement Backend :} Java (Spring Boot), Node.js, PHP, C/C++, REST APIs.
+    \item \textbf{Frontend :} JavaScript, TypeScript, Vue.js, HTML5/CSS3, Architecture MVC.
+    \item \textbf{Base de données \& DevOps :} PostgreSQL (pgvector), MySQL, Docker, Git, GitLab CI/CD, Linux (Bash).
+    \item \textbf{Langues :} Français (avancé), Anglais (courant), Arabe (natif).
+\end{itemize}
+
+% PROJETS
+\section*{Projets Académiques \& Personnels}
+\textbf{Jeu de plateau stratégique (Jeu des Amazones)} \hfill 2026 \\
+\textit{Université de Bordeaux ( Master IA )}
+\begin{itemize}[leftmargin=*,noitemsep]
+    \item \textbf{Moteur} : Représentation via bitboards de taille dynamique (4x4 à 11x11).
+    \item \textbf{IA Hybride} : Algorithme Minimax ($\alpha\beta$) combiné à MCTS et Keras (Deep Learning).
+    \item \textbf{Réseau \& GUI} : Modèle MVC strict, multijoueur client-serveur asynchrone (asyncio), interface GTK4.
+    \item \textbf{Technos :} Python, PyGObject, Keras, asyncio, pytest.
+\end{itemize}
+\textbf{Moteur de Jeu Vidéo Vintage \& Architecture Logicielle} \hfill 2025 \\
+\textit{Université de Bordeaux}
+\begin{itemize}[leftmargin=*,noitemsep]
+    \item Développement d’un moteur RPG 2D inspiré des années 90 avec architecture MVC et Design Patterns.
+    \item Conception orientée objet et gestion avancée des collisions et événements utilisateurs.
+    \item \textbf{Technos :} Java, Swing, Design Patterns (Observer, Strategy).
+\end{itemize}
+\textbf{Application Client–Serveur de Recherche d’Images} \hfill 2024 \\
+\textit{Université de Bordeaux}
+\begin{itemize}[leftmargin=*,noitemsep]
+    \item Développement d’un système complet de recherche d’images par similarité avec API REST.
+    \item Indexation vectorielle PostgreSQL (pgvector), interface réactive Vue.js, pipeline CI/CD GitLab.
+    \item \textbf{Technos :} Java, Spring Boot, PostgreSQL, Vue.js, GitLab CI/CD.
+\end{itemize}
+\textbf{Plate-forme de Monitoring \& Gestion d’Alerte} \hfill 2023 \\
+\textit{Université d’Avignon}
+\begin{itemize}[leftmargin=*,noitemsep]
+    \item Automatisation de la surveillance de serveurs et coordination d’alertes avec le C.E.R.T.
+    \item \textbf{Technos :} Bash, Python, Linux System Administration.
+\end{itemize}
+\textbf{Site e-commerce “myBike”} \hfill 2022 \\
+\textit{Université d’Avignon}
+\begin{itemize}[leftmargin=*,noitemsep]
+    \item Application full-stack pour gestion des commandes et interface administrateur sécurisée.
+    \item \textbf{Technos :} PHP, MySQL (PDO), HTML/CSS, MVC.
+\end{itemize}
+
+% EXPÉRIENCE
+\section*{Expérience Professionnelle}
+\textbf{Équipier de commerce (CDI étudiant)} \hfill Août 2024 – Présent \\
+\textit{Auchan Retail, Mérignac}
+\begin{itemize}[leftmargin=*,noitemsep]
+    \item Accueil client et conseil personnalisé garantissant un service de qualité.
+    \item Gestion des stocks et mise en rayon efficace dans un environnement dynamique.
+    \item Développement de la rigueur, de la communication et du travail en équipe.
+\end{itemize}
+\textbf{Inventoriste} \hfill Nov. 2021 – Juil. 2024 \\
+\textit{RGIS France, Avignon}
+\begin{itemize}[leftmargin=*,noitemsep]
+    \item Réalisation d’inventaires précis pour divers clients professionnels.
+    \item Utilisation d’outils de comptage électroniques avec contrôle qualité et respect des délais.
+\end{itemize}
+
+% CERTIFICATIONS
+\section*{Certifications}
+\textbf{Linguaskill – Cambridge Assessment English (Niveau B1)} \hfill Déc. 2024
+\end{document}

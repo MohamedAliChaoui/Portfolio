@@ -138,6 +138,18 @@ export const portfolioData: PortfolioData = {
       technologies: ["Python", "Bash", "System Admin"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       icon: "fas fa-chart-line"
+    },
+    {
+      id: "p_amazons_game",
+      title: { fr: "Jeu des Amazones (IA & Réseau)", en: "Game of the Amazons (AI & Network)" },
+      year: "2026",
+      description: {
+        fr: "Moteur de jeu complet avec IA hybride (Minimax/αβ + MCTS/Keras) et architecture client-serveur asynchrone.",
+        en: "Full game engine with hybrid AI (Minimax/αβ + MCTS/Keras) and asynchronous client-server architecture."
+      },
+      technologies: ["Python", "PyGObject", "Keras", "asyncio"],
+      image: "https://images.unsplash.com/photo-1611195974226-a6a9be9dd762?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      icon: "fas fa-chess-board"
     }
   ],
   contact: {
@@ -173,7 +185,7 @@ export const translations: Translations = {
   'about.qualities': { fr: 'Mes qualités', en: 'My Qualities' },
   'about.certifications': { fr: 'Certifications', en: 'Certifications' },
   'about.availability': { fr: 'Disponibilité', en: 'Availability' },
-  'about.availability.text': { fr: 'Je suis à la recherche d\'un stage de 1 à 2 mois en Data Science / IA à partir de juin 2026.', en: 'I am looking for a 1-2 month internship in Data Science / AI starting June 2026.' },
+  'about.availability.text': { fr: 'Je suis à la recherche d\'un stage de 1 à 3 mois en Data Science / IA à partir de mai 2026.', en: 'I am looking for a 1-3 month internship in Data Science / AI starting May 2026.' },
   'about.available': { fr: 'Recherche de stage (2026)', en: 'Looking for Internship (2026)' },
 
   // Skills Section
