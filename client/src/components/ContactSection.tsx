@@ -25,7 +25,7 @@ export const ContactSection = () => {
       // Configuration EmailJS (les utilisateurs devront configurer leur propre service)
       const serviceId = 'service_zzyc6lf';
       const templateId = 'template_3ffo3nr';
-      const publicKey = 'as-wejFvrmiIoDoNtIW__';
+      const publicKey = 'wwCzQAqd7FqDJ7CGN';
 
       const templateParams = {
         name: formData.name,
@@ -50,25 +50,11 @@ export const ContactSection = () => {
           message: ''
         });
       } catch (emailError) {
-        // Si EmailJS n'est pas configuré, on log les données pour démonstration
-        console.log('Contact Form Data:', {
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          timestamp: new Date().toISOString()
-        });
-
+        console.error('EmailJS Error:', emailError);
         toast({
-          title: "Message reçu !",
-          description: "Votre message a été enregistré. Pour l'instant, EmailJS n'est pas configuré, mais vos informations ont été sauvegardées.",
-        });
-
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
+          title: "Erreur d'envoi",
+          description: "Le service d'email est temporairement indisponible. Veuillez réessayer plus tard ou me contacter directement par email.",
+          variant: "destructive",
         });
       }
     } catch (error) {
