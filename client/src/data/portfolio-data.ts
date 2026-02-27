@@ -148,7 +148,7 @@ export const portfolioData: PortfolioData = {
         en: "Full game engine with hybrid AI (Minimax/αβ + MCTS/Keras) and asynchronous client-server architecture."
       },
       technologies: ["Python", "PyGObject", "Keras", "asyncio"],
-      image: "https://images.unsplash.com/photo-1611195974226-a6a9be9dd762?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      image: "https://images.unsplash.com/photo-1528819622765-d6bcf132f793?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       icon: "fas fa-chess-board"
     }
   ],
