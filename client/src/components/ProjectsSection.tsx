@@ -89,26 +89,30 @@ export const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-                {/* <div className="grid grid-cols-2 gap-3">
-                  <a
-                    href={project.githubUrl || "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-secondary text-white text-sm rounded-lg transition-colors duration-200 min-h-[40px]"
-                  >
-                    <Github className="mr-2 w-4 h-4" />
-                    {t('projects.github')}
-                  </a>
-                  <a
-                    href={project.demoUrl || "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-white text-sm rounded-lg transition-colors duration-200 min-h-[40px]"
-                  >
-                    <ExternalLink className="mr-2 w-4 h-4" />
-                    {t('projects.demo')}
-                  </a>
-                </div> */}
+                <div className="grid grid-cols-2 gap-3">
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-secondary text-white text-sm rounded-lg transition-colors duration-200 min-h-[40px]"
+                    >
+                      <Github className="mr-2 w-4 h-4" />
+                      {t('projects.github')}
+                    </a>
+                  )}
+                  {project.demoUrl && (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-white text-sm rounded-lg transition-colors duration-200 min-h-[40px] col-span-2"
+                    >
+                      <ExternalLink className="mr-2 w-4 h-4" />
+                      {t('projects.demo')}
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}

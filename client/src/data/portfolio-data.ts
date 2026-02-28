@@ -128,7 +128,8 @@ export const portfolioData: PortfolioData = {
       description: { fr: "Système de recherche d'images par similarité utilisant pgvector pour l'indexation vectorielle. Architecture micro-services.", en: "Image similarity search system using pgvector for vector indexing. Micro-services architecture." },
       technologies: ["PostgreSQL", "pgvector", "Spring Boot", "Vue.js"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-      icon: "fas fa-search"
+      icon: "fas fa-search",
+      demoUrl: "https://similarity-pic.vercel.app/"
     },
     {
       id: "p_monitoring",
