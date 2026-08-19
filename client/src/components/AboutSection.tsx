@@ -83,7 +83,7 @@ export const AboutSection = () => {
                       <h4 className="font-medium">{resolveLanguage(exp.position)}</h4>
                       <p className="text-primary font-medium">{exp.company}</p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">{resolveLanguage(exp.period)}</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{resolveLanguage(exp.description)}</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1 whitespace-pre-line">{resolveLanguage(exp.description)}</p>
                     </div>
                   </div>
                 ))}

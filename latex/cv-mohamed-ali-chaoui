@@ -60,11 +60,11 @@
 
 % PROFIL
 \section*{Profil}
-Étudiant en \textbf{Master Informatique – Spécialité Intelligence Artificielle} à l’Université de Bordeaux, passionné par la \textbf{Data Science}, l’optimisation et l’ingénierie logicielle. J’aime concevoir des systèmes robustes alliant logique algorithmique, apprentissage automatique et développement full-stack. Je recherche un \textbf{stage de 1 à 3 mois à partir de mai 2026} en \textbf{Data Science / Machine Learning / Développement IA}.
+Étudiant en \textbf{Master Informatique – Spécialité Intelligence Artificielle} à l’Université de Bordeaux, spécialisé dans l'application de la \textbf{Data Science}, la résolution de problèmes d'optimisation (graphes, chemins) et l’ingénierie logicielle. J’aime concevoir des systèmes robustes alliant logique algorithmique, apprentissage automatique et développement full-stack. Je recherche une \textbf{alternance en IA / Data Science / Génie Logiciel} pour mon Master 2 à partir de septembre 2026.
 
 % FORMATION
 \section*{Formation}
-\textbf{Master 1 Informatique – Parcours Intelligence Artificielle} \hfill Sept. 2025 – Juin 2027 \\
+\textbf{Master Informatique – Parcours Intelligence Artificielle} \hfill Sept. 2025 – Sept. 2027 \\
 \textit{Université de Bordeaux}
 \begin{itemize}[leftmargin=*,noitemsep]
     \item Machine Learning \& Deep Learning, raisonnement automatique, traitement d’images, analyse et classification de données, conception orientée objet et complexité algorithmique.
@@ -83,15 +83,24 @@
 % COMPÉTENCES
 \section*{Compétences Techniques}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item \textbf{IA \& Data Science :} Python (Pandas, NumPy, Scikit-learn, PyTorch), Algorithmique, Modélisation de données.
-    \item \textbf{Développement Backend :} Java (Spring Boot), Node.js, PHP, C/C++, REST APIs.
-    \item \textbf{Frontend :} JavaScript, TypeScript, Vue.js, HTML5/CSS3, Architecture MVC.
+    \item \textbf{IA \& Data Science :} Python (Pandas, NumPy, Scikit-learn, PyTorch), Algorithmique avancée (théorie des graphes, optimisation combinatoire, calcul de complexité), Modélisation de données.
+    \item \textbf{Développement Backend :} Java (Spring Boot), Python (Flask), Node.js, PHP, C/C++, REST APIs.
+    \item \textbf{Frontend :} JavaScript, TypeScript, Vue.js, HTML5/CSS3, Tailwind CSS, Architecture MVC.
     \item \textbf{Base de données \& DevOps :} PostgreSQL (pgvector), MySQL, Docker, Git, GitLab CI/CD, Linux (Bash).
     \item \textbf{Langues :} Français (avancé), Anglais (courant), Arabe (natif).
 \end{itemize}
 
 % PROJETS
 \section*{Projets Académiques \& Personnels}
+\textbf{Serious Game : "Le Voyageur de Commerce Intersidéral"} \hfill 2026 \\
+\textit{Inria Talence (Projet CAP IA)}
+\begin{itemize}[leftmargin=*,noitemsep]
+    \item Contribution au développement d'un jeu vidéo éducatif visant à promouvoir les formations en intelligence artificielle.
+    \item Réécriture complète de l'application serveur de Java (Spring Boot) vers Python (Flask).
+    \item Optimisation des algorithmes de résolution du problème du voyageur de commerce (TSP).
+    \item \textbf{Démo :} \href{https://campus-ia.u-bordeaux.fr/voyageur-de-commerce/}{campus-ia.u-bordeaux.fr/voyageur-de-commerce}
+    \item \textbf{Technos :} Python, Flask, Java, Spring Boot, HTML, JavaScript, Tailwind CSS.
+\end{itemize}
 \textbf{Jeu de plateau stratégique (Jeu des Amazones)} \hfill 2026 \\
 \textit{Université de Bordeaux ( Master IA )}
 \begin{itemize}[leftmargin=*,noitemsep]
@@ -110,8 +119,8 @@
 \textbf{Application Client–Serveur de Recherche d’Images} \hfill 2024 \\
 \textit{Université de Bordeaux}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item Développement d’un système complet de recherche d’images par similarité avec API REST.
-    \item Indexation vectorielle PostgreSQL (pgvector), interface réactive Vue.js, pipeline CI/CD GitLab.
+    \item Conception de l'architecture logicielle backend et développement d'API REST avec Java et Spring Boot.
+    \item Intégration d'un système d'indexation vectorielle (PostgreSQL/pgvector) et interfaçage avec le framework Spring.
     \item \textbf{Technos :} Java, Spring Boot, PostgreSQL, Vue.js, GitLab CI/CD.
 \end{itemize}
 \textbf{Plate-forme de Monitoring \& Gestion d’Alerte} \hfill 2023 \\
@@ -129,7 +138,15 @@
 
 % EXPÉRIENCE
 \section*{Expérience Professionnelle}
-\textbf{Équipier de commerce (CDI étudiant)} \hfill Août 2024 – Présent \\
+\textbf{Stagiaire Serious Games -- Projet CAP IA} \hfill Mai 2026 – Juil. 2026 \\
+\textit{Inria, Talence (Stage)}
+\begin{itemize}[leftmargin=*,noitemsep]
+    \item Contribution au projet CAP IA de l'Université de Bordeaux visant à renforcer l'attractivité des formations en intelligence artificielle.
+    \item Développement de serious games axés sur l'optimisation mathématique et l'intelligence artificielle.
+    \item Réécriture de l'application serveur de Java (Spring Boot) vers Python (Flask) et développement sur le jeu "Le Voyageur de Commerce Intersidéral".
+    \item Optimisation des fonctionnalités existantes et intégration d'améliorations logicielles.
+\end{itemize}
+\textbf{Équipier de commerce (CDI étudiant)} \hfill Août 2024 – Mai 2026 \\
 \textit{Auchan Retail, Mérignac}
 \begin{itemize}[leftmargin=*,noitemsep]
     \item Accueil client et conseil personnalisé garantissant un service de qualité.

@@ -1,5 +1,6 @@
 import { PortfolioData, Translations, LanguageInfo } from '../types/portfolio';
 import profilePhoto from '@assets/photo cv_1754311161081.jpeg';
+import voyageurCommerceThumbnail from '@assets/voyageur_commerce_thumbnail.png';
 
 export const portfolioData: PortfolioData = {
   personalInfo: {
@@ -31,10 +32,33 @@ export const portfolioData: PortfolioData = {
       {
         position: { fr: "Equipier de commerce", en: "Sales Associate" },
         company: "AUCHAN",
-        period: { fr: "Août 2024 - Présent", en: "August 2024 - Present" },
+        period: { fr: "Août 2024 - Mai 2026", en: "August 2024 - May 2026" },
         description: {
           fr: "Accueil client, conseil personnalisé, gestion des stocks et mise en rayon efficace dans un environnement dynamique.",
           en: "Customer reception, personalized advice, stock management and efficient shelving in a dynamic environment."
+        }
+      },
+      {
+        position: { fr: "Stagiaire Serious Games - Projet CAP IA", en: "Serious Games Intern - CAP IA Project" },
+        company: "Inria",
+        period: { fr: "Mai 2026 - Juillet 2026", en: "May 2026 - July 2026" },
+        description: {
+          fr: `Contribution au projet CAP IA de l'Université de Bordeaux visant à renforcer l'attractivité des formations en intelligence artificielle. Développement de serious games axés sur l'optimisation mathématique et l'intelligence artificielle.
+
+Missions :
+- Développement sur le jeu "Le Voyageur de Commerce Intersidéral".
+- Réécriture de l'application serveur de Java (Spring Boot) vers Python (Flask).
+- Optimisation des fonctionnalités existantes et intégration d'améliorations logicielles.
+
+Technologies : Python, Java, Flask, Spring Boot, IA, HTML, JavaScript, Tailwind CSS`,
+          en: `Contribution to the CAP IA project at the University of Bordeaux aimed at strengthening the attractiveness of AI programs. Development of serious games focused on mathematical optimization and artificial intelligence.
+
+Missions:
+- Development on the "Interstellar Traveling Salesperson" game.
+- Rewrite of the server application from Java (Spring Boot) to Python (Flask).
+- Optimization of existing features and integration of software improvements.
+
+Technologies: Python, Java, Flask, Spring Boot, AI, HTML, JavaScript, Tailwind CSS`
         }
       },
       {
@@ -49,9 +73,9 @@ export const portfolioData: PortfolioData = {
     ],
     education: [
       {
-        degree: { fr: "Master 1 - Informatique (IA)", en: "Master 1 - Computer Science (AI)" },
+        degree: { fr: "Master - Informatique (IA)", en: "Master - Computer Science (AI)" },
         institution: { fr: "Université de Bordeaux", en: "University of Bordeaux" },
-        period: { fr: "Septembre 2025 – Juin 2027", en: "September 2025 – June 2027" }
+        period: { fr: "Septembre 2025 – Septembre 2027", en: "September 2025 – September 2027" }
       },
       {
         degree: { fr: "Licence 3 - Informatique", en: "Bachelor 3 - Computer Science" },
@@ -91,7 +115,9 @@ export const portfolioData: PortfolioData = {
       { name: "PyTorch", level: 80, icon: "devicon-pytorch-original colored", color: "#ee4c2c" },
       { name: "Scikit-learn", level: 80, icon: "devicon-scikitlearn-plain colored", color: "#f7931e" },
       { name: "Spring Boot", level: 85, icon: "devicon-spring-plain colored", color: "#6db33f" },
+      { name: "Flask", level: 80, icon: "devicon-flask-original colored", color: "#333333" },
       { name: "Vue.js", level: 80, icon: "devicon-vuejs-plain colored", color: "#4fc08d" },
+      { name: "Tailwind CSS", level: 85, icon: "devicon-tailwindcss-plain colored", color: "#38bdf8" },
       { name: "Pandas/NumPy", level: 85, icon: "devicon-pandas-plain colored", color: "#150458" }
     ],
     databases: [
@@ -103,6 +129,19 @@ export const portfolioData: PortfolioData = {
     ]
   },
   projects: [
+    {
+      id: "p_voyageur_commerce",
+      title: { fr: "Le Voyageur de Commerce Intersidéral", en: "The Interstellar Traveling Salesperson" },
+      year: "2026",
+      description: {
+        fr: "Serious game développé dans le cadre du projet CAP IA pour renforcer l'attractivité des formations en IA. Réécriture complète du backend de Java (Spring Boot) vers Python (Flask), et intégration de fonctionnalités et d'améliorations logicielles.",
+        en: "Serious game developed for the CAP IA project to boost the appeal of AI programs. Complete backend rewrite from Java (Spring Boot) to Python (Flask), and integration of features and software improvements."
+      },
+      technologies: ["Python", "Flask", "Java", "Spring Boot", "HTML", "JavaScript", "Tailwind CSS"],
+      image: voyageurCommerceThumbnail,
+      icon: "fas fa-space-shuttle",
+      demoUrl: "https://campus-ia.u-bordeaux.fr/voyageur-de-commerce/"
+    },
     {
       id: "p_algo_sat",
       title: { fr: "Solveur Algorithmique (SAT)", en: "Algorithmic Solver (SAT)" },
@@ -186,8 +225,8 @@ export const translations: Translations = {
   'about.qualities': { fr: 'Mes qualités', en: 'My Qualities' },
   'about.certifications': { fr: 'Certifications', en: 'Certifications' },
   'about.availability': { fr: 'Disponibilité', en: 'Availability' },
-  'about.availability.text': { fr: 'Je suis à la recherche d\'un stage de 1 à 3 mois en Data Science / IA à partir de mai 2026.', en: 'I am looking for a 1-3 month internship in Data Science / AI starting May 2026.' },
-  'about.available': { fr: 'Recherche de stage (2026)', en: 'Looking for Internship (2026)' },
+  'about.availability.text': { fr: 'Je suis à la recherche d\'un contrat d\'alternance (apprentissage ou professionnalisation) en Data Science / IA / Génie Logiciel pour mon Master 2 à partir de septembre 2026.', en: 'I am looking for a work-study contract (apprenticeship) in Data Science / AI / Software Engineering for my Master 2 starting September 2026.' },
+  'about.available': { fr: 'Recherche d\'alternance (2026-2027)', en: 'Looking for Work-Study / Alternance (2026-2027)' },
 
   // Skills Section
   'skills.title': { fr: 'Compétences Techniques', en: 'Technical Skills' },
