@@ -8,23 +8,36 @@ export const ProjectsSection = () => {
 
   const getTechColor = (tech: string) => {
     const colorMap: { [key: string]: string } = {
-      'Java': 'bg-orange-100 text-orange-800',
-      'Spring Boot': 'bg-green-100 text-green-800',
-      'PostgreSQL': 'bg-blue-100 text-blue-800',
-      'Vue.js': 'bg-green-100 text-green-800',
-      'PHP': 'bg-purple-100 text-purple-800',
-      'PDO': 'bg-blue-100 text-blue-800',
-      'MySQL': 'bg-blue-100 text-blue-800',
-      'Bash': 'bg-gray-100 text-gray-800',
-      'Python': 'bg-blue-100 text-blue-800',
-      'HTML': 'bg-orange-100 text-orange-800',
-      'CSS': 'bg-blue-100 text-blue-800',
-      'JavaScript': 'bg-yellow-100 text-yellow-800',
-      'C++': 'bg-blue-100 text-blue-800',
-      'C': 'bg-blue-100 text-blue-800',
-      'GitLab CI/CD': 'bg-orange-100 text-orange-800'
+      'Java': 'bg-orange-100 text-orange-800 dark:bg-orange-950/50 dark:text-orange-300',
+      'Spring Boot': 'bg-green-100 text-green-800 dark:bg-green-950/50 dark:text-green-300',
+      'PostgreSQL': 'bg-sky-100 text-sky-800 dark:bg-sky-950/50 dark:text-sky-300',
+      'pgvector': 'bg-indigo-100 text-indigo-800 dark:bg-indigo-950/50 dark:text-indigo-300',
+      'Vue.js': 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950/50 dark:text-emerald-300',
+      'Flask': 'bg-neutral-200 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200',
+      'Tailwind CSS': 'bg-cyan-100 text-cyan-800 dark:bg-cyan-950/50 dark:text-cyan-300',
+      'PHP': 'bg-purple-100 text-purple-800 dark:bg-purple-950/50 dark:text-purple-300',
+      'PDO': 'bg-blue-100 text-blue-800 dark:bg-blue-950/50 dark:text-blue-300',
+      'MySQL': 'bg-blue-100 text-blue-800 dark:bg-blue-950/50 dark:text-blue-300',
+      'Bash': 'bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200',
+      'Python': 'bg-blue-100 text-blue-800 dark:bg-blue-950/50 dark:text-blue-300',
+      'HTML': 'bg-orange-100 text-orange-800 dark:bg-orange-950/50 dark:text-orange-300',
+      'CSS': 'bg-blue-100 text-blue-800 dark:bg-blue-950/50 dark:text-blue-300',
+      'JavaScript': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-950/50 dark:text-yellow-300',
+      'TypeScript': 'bg-blue-100 text-blue-800 dark:bg-blue-950/50 dark:text-blue-300',
+      'C++': 'bg-blue-100 text-blue-800 dark:bg-blue-950/50 dark:text-blue-300',
+      'C': 'bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200',
+      'GitLab CI/CD': 'bg-orange-100 text-orange-800 dark:bg-orange-950/50 dark:text-orange-300',
+      'IA': 'bg-purple-100 text-purple-800 dark:bg-purple-950/50 dark:text-purple-300',
+      'Keras': 'bg-rose-100 text-rose-800 dark:bg-rose-950/50 dark:text-rose-300',
+      'PyGObject': 'bg-teal-100 text-teal-800 dark:bg-teal-950/50 dark:text-teal-300',
+      'asyncio': 'bg-violet-100 text-violet-800 dark:bg-violet-950/50 dark:text-violet-300',
+      'Algorithmique': 'bg-amber-100 text-amber-800 dark:bg-amber-950/50 dark:text-amber-300',
+      'Complexité': 'bg-red-100 text-red-800 dark:bg-red-950/50 dark:text-red-300',
+      'Swing': 'bg-amber-100 text-amber-800 dark:bg-amber-950/50 dark:text-amber-300',
+      'Design Patterns': 'bg-indigo-100 text-indigo-800 dark:bg-indigo-950/50 dark:text-indigo-300',
+      'System Admin': 'bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300'
     };
-    return colorMap[tech] || 'bg-gray-100 text-gray-800';
+    return colorMap[tech] || 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300';
   };
 
   const downloadCV = () => {

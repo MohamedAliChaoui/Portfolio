@@ -31,6 +31,7 @@ export interface Education {
   degree: LocalizedContent;
   institution: LocalizedContent;
   period: LocalizedContent;
+  description?: LocalizedContent;
   location?: string;
 }
 

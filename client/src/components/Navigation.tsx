@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useTheme } from './ThemeProvider';
 import { useLanguage } from '../hooks/useLanguage';
-import logo from '@assets/logo.jpg';
-import { Menu, X, Sun, Moon, BrainCircuit } from 'lucide-react';
+import { Menu, X, Sun, Moon, FileDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const Navigation = () => {
@@ -27,13 +26,16 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo MAC */}
-          <div className="flex items-center space-x-3">
+          <div 
+            className="flex items-center space-x-3 cursor-pointer"
+            onClick={() => scrollToSection('home')}
+          >
             <div className="relative">
-              <BrainCircuit className="w-10 h-10 text-primary animate-pulse" />
+              <img src="/favicon.svg" alt="Logo MAC" className="w-10 h-10 rounded-xl shadow-md hover:scale-105 transition-transform" />
             </div>
             <div className="hidden sm:block">
               <h3 className="font-semibold text-gray-900 dark:text-white">Mohamed Ali Chaoui</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Student in AI & Data Science</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">{t('nav.role')}</p>
             </div>
           </div>
 
@@ -51,7 +53,18 @@ export const Navigation = () => {
           </div>
 
           {/* Controls */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
+            {/* Direct CV Download button */}
+            <a
+              href="/cv-mohamed-ali-chaoui.pdf"
+              download="CV-Mohamed-Ali-Chaoui.pdf"
+              className="inline-flex items-center px-3 py-1.5 rounded-lg bg-primary/10 hover:bg-primary text-primary hover:text-white dark:bg-primary/20 dark:hover:bg-primary dark:text-primary dark:hover:text-white text-xs sm:text-sm font-semibold transition-all duration-200 shadow-sm"
+              title="Télécharger mon CV (PDF)"
+            >
+              <FileDown className="w-4 h-4 mr-1.5" />
+              <span>CV (PDF)</span>
+            </a>
+
             {/* Language Toggle */}
             <button
               onClick={toggleLanguage}
@@ -88,7 +101,7 @@ export const Navigation = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 overflow-hidden"
           >
-            <div className="px-4 py-2 space-y-2">
+            <div className="px-4 py-3 space-y-2">
               {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
                 <button
                   key={item}
@@ -98,6 +111,14 @@ export const Navigation = () => {
                   {t(`nav.${item}`)}
                 </button>
               ))}
+              <a
+                href="/cv-mohamed-ali-chaoui.pdf"
+                download="CV-Mohamed-Ali-Chaoui.pdf"
+                className="flex items-center justify-center w-full py-2.5 mt-3 bg-primary text-white rounded-lg text-sm font-medium transition-colors"
+              >
+                <FileDown className="w-4 h-4 mr-2" />
+                {t('projects.cv.download')}
+              </a>
             </div>
           </motion.div>
         )}

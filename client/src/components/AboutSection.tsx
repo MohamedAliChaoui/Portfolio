@@ -73,7 +73,7 @@ export const AboutSection = () => {
             <motion.div variants={itemVariants} className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
               <h3 className="text-xl font-semibold mb-3 flex items-center">
                 <Briefcase className="text-primary mr-3 w-6 h-6" />
-                Expériences professionnelles
+                {t('about.experiences')}
               </h3>
               <div className="space-y-3">
                 {portfolioData.about.experiences.map((exp, index) => (
@@ -102,6 +102,11 @@ export const AboutSection = () => {
                     <div>
                       <h4 className="font-medium">{resolveLanguage(edu.degree)}</h4>
                       <p className="text-gray-600 dark:text-gray-400">{resolveLanguage(edu.institution)} ({resolveLanguage(edu.period)})</p>
+                      {edu.description && (
+                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1.5 whitespace-pre-line leading-relaxed">
+                          {resolveLanguage(edu.description)}
+                        </p>
+                      )}
                     </div>
                   </div>
                 ))}

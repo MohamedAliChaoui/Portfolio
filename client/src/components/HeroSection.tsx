@@ -72,7 +72,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex justify-center lg:justify-end"
+            className="flex flex-col items-center lg:items-end justify-center"
           >
             <div className="relative">
               {/* Professional Photo */}
@@ -91,6 +91,19 @@ export const HeroSection = () => {
 
               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-secondary rounded-full flex items-center justify-center shadow-lg animate-pulse">
                 <i className="fas fa-graduation-cap text-white text-xl"></i>
+              </div>
+            </div>
+
+            {/* Badge de disponibilité sous la photo */}
+            <div className="mt-8 flex justify-center w-full lg:max-w-md">
+              <div className="inline-flex items-center px-4 py-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-emerald-500/30 dark:border-emerald-500/20 shadow-md hover:shadow-lg rounded-full transition-all duration-300 transform hover:-translate-y-0.5">
+                <span className="relative flex h-2.5 w-2.5 mr-2.5 flex-shrink-0">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                </span>
+                <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-200 text-center">
+                  {t('hero.badge')}
+                </span>
               </div>
             </div>
           </motion.div>

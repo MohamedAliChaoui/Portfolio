@@ -29,7 +29,7 @@
 \begin{minipage}[t]{0.72\textwidth}
     \vspace{0pt}
     {\Huge \textbf{Mohamed Ali Chaoui}} \\[5pt]
-    \href{mailto:ali.chaoui.123@gmail.com}{ali.chaoui.123@gmail.com} \,|\, +33 6 51 61 56 86 \,|\, Bordeaux, France \\[8pt]
+    \href{mailto:ali.chaoui.123@gmail.com}{ali.chaoui.123@gmail.com} \,|\, +33 6 51 61 56 86 \,|\, Bordeaux, France \,|\, Permis B \\[8pt]
     
     % Liens cliquables sur PDF et lisibles sur papier
     \textbf{GitHub :} \href{https://github.com/MohamedAliChaoui}{github.com/MohamedAliChaoui} \\
@@ -41,33 +41,59 @@
     \begin{flushright}
         % Photo de profil
         \begin{tikzpicture}
-            \node[draw=gray, line width=0.5pt, circle, inner sep=0pt, minimum size=2.5cm, path picture={
+            \node[draw=gray, line width=0.5pt, circle, inner sep=0pt, minimum size=2.9cm, path picture={
                 \node at (path picture bounding box.center){
-                    \includegraphics[width=2.5cm]{Photo PRO.jpeg}
+                    \includegraphics[width=2.9cm]{Photo PRO.jpeg}
                 };
             }] {};
         \end{tikzpicture}
         
-        \vspace{8pt}
+        \vspace{6pt}
         
         % QR Code vers le Portfolio (le plus utile à scanner)
-        \qrcode[height=2cm]{https://portfolio-chaoui-mohamed-ali.vercel.app/}
+        \qrcode[height=1.4cm]{https://portfolio-chaoui-mohamed-ali.vercel.app/}
         
         \vspace{2pt}
-        {\tiny \textit{Scan : Mon Portfolio}}
+        {\tiny \textit{Mon Portfolio}}
     \end{flushright}
 \end{minipage}
 
 % PROFIL
 \section*{Profil}
-Étudiant en \textbf{Master Informatique – Spécialité Intelligence Artificielle} à l’Université de Bordeaux, spécialisé dans l'application de la \textbf{Data Science}, la résolution de problèmes d'optimisation (graphes, chemins) et l’ingénierie logicielle. J’aime concevoir des systèmes robustes alliant logique algorithmique, apprentissage automatique et développement full-stack. Je recherche une \textbf{alternance en IA / Data Science / Génie Logiciel} pour mon Master 2 à partir de septembre 2026.
+Étudiant en \textbf{Master Informatique – Spécialité Intelligence Artificielle} à l’Université de Bordeaux, spécialisé dans la conception de modèles d'apprentissage (Machine Learning, Deep Learning, Reinforcement Learning), la résolution de problèmes d'optimisation (graphes, chemins) et l’ingénierie logicielle. J’aime concevoir des systèmes intelligents et robustes alliant logique algorithmique et développement full-stack. Je recherche un \textbf{stage de fin d'études de 6 mois en Intelligence Artificielle} à partir de \textbf{mars 2027}, mobile dans toute la France.
+
+% EXPÉRIENCE
+\section*{Expérience Professionnelle}
+\textbf{Stagiaire Serious Games -- Projet CAP IA} \hfill Mai 2026 – Juil. 2026 \\
+\textit{Inria, Talence (Stage)}
+\begin{itemize}[leftmargin=*,noitemsep]
+    \item Contribution au projet CAP IA de l'Université de Bordeaux visant à renforcer l'attractivité des formations en intelligence artificielle.
+    \item Développement de serious games axés sur l'optimisation mathématique et l'intelligence artificielle.
+    \item Réécriture de l'application serveur de Java (Spring Boot) vers Python (Flask) et développement sur le jeu "Le Voyageur de Commerce Intersidéral".
+    \item Optimisation des fonctionnalités existantes et intégration d'améliorations logicielles.
+\end{itemize}
+\textbf{Équipier de commerce} \hfill Août 2024 – Présent \\
+\textit{Auchan Retail, Mérignac}
+\begin{itemize}[leftmargin=*,noitemsep]
+    \item Accueil client et conseil personnalisé garantissant un service de qualité.
+    \item Gestion des stocks et mise en rayon efficace dans un environnement dynamique.
+    \item Développement de la rigueur, de la communication et du travail en équipe.
+\end{itemize}
+\textbf{Inventoriste} \hfill Nov. 2021 – Juil. 2024 \\
+\textit{RGIS France, Avignon}
+\begin{itemize}[leftmargin=*,noitemsep]
+    \item Réalisation d’inventaires précis pour divers clients professionnels.
+    \item Utilisation d’outils de comptage électroniques avec contrôle qualité et respect des délais.
+\end{itemize}
 
 % FORMATION
 \section*{Formation}
 \textbf{Master Informatique – Parcours Intelligence Artificielle} \hfill Sept. 2025 – Sept. 2027 \\
 \textit{Université de Bordeaux}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item Machine Learning \& Deep Learning, raisonnement automatique, traitement d’images, analyse et classification de données, conception orientée objet et complexité algorithmique.
+    \item \textbf{Modèles \& Apprentissage :} Réseaux neuronaux avancés, apprentissage par renforcement (RL), Machine \& Deep Learning.
+    \item \textbf{Raisonnement \& Éthique :} Représentation des connaissances, IA explicable (XAI), IA durable et frugale.
+    \item \textbf{Méthodologie :} Analyse d'articles scientifiques, séminaires de recherche, vision par ordinateur et complexité algorithmique.
 \end{itemize}
 \textbf{Licence 3 Informatique} \hfill Sept. 2024 – Juin 2025 \\
 \textit{Université de Bordeaux}
@@ -80,15 +106,7 @@
     \item Programmation impérative (C, Python), structures de données et algorithmique, bases de données relationnelles (SQL), réseaux informatiques et systèmes d’exploitation Linux/Windows, initiation au développement web.
 \end{itemize}
 
-% COMPÉTENCES
-\section*{Compétences Techniques}
-\begin{itemize}[leftmargin=*,noitemsep]
-    \item \textbf{IA \& Data Science :} Python (Pandas, NumPy, Scikit-learn, PyTorch), Algorithmique avancée (théorie des graphes, optimisation combinatoire, calcul de complexité), Modélisation de données.
-    \item \textbf{Développement Backend :} Java (Spring Boot), Python (Flask), Node.js, PHP, C/C++, REST APIs.
-    \item \textbf{Frontend :} JavaScript, TypeScript, Vue.js, HTML5/CSS3, Tailwind CSS, Architecture MVC.
-    \item \textbf{Base de données \& DevOps :} PostgreSQL (pgvector), MySQL, Docker, Git, GitLab CI/CD, Linux (Bash).
-    \item \textbf{Langues :} Français (avancé), Anglais (courant), Arabe (natif).
-\end{itemize}
+\newpage
 
 % PROJETS
 \section*{Projets Académiques \& Personnels}
@@ -136,28 +154,14 @@
     \item \textbf{Technos :} PHP, MySQL (PDO), HTML/CSS, MVC.
 \end{itemize}
 
-% EXPÉRIENCE
-\section*{Expérience Professionnelle}
-\textbf{Stagiaire Serious Games -- Projet CAP IA} \hfill Mai 2026 – Juil. 2026 \\
-\textit{Inria, Talence (Stage)}
+% COMPÉTENCES
+\section*{Compétences Techniques}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item Contribution au projet CAP IA de l'Université de Bordeaux visant à renforcer l'attractivité des formations en intelligence artificielle.
-    \item Développement de serious games axés sur l'optimisation mathématique et l'intelligence artificielle.
-    \item Réécriture de l'application serveur de Java (Spring Boot) vers Python (Flask) et développement sur le jeu "Le Voyageur de Commerce Intersidéral".
-    \item Optimisation des fonctionnalités existantes et intégration d'améliorations logicielles.
-\end{itemize}
-\textbf{Équipier de commerce (CDI étudiant)} \hfill Août 2024 – Mai 2026 \\
-\textit{Auchan Retail, Mérignac}
-\begin{itemize}[leftmargin=*,noitemsep]
-    \item Accueil client et conseil personnalisé garantissant un service de qualité.
-    \item Gestion des stocks et mise en rayon efficace dans un environnement dynamique.
-    \item Développement de la rigueur, de la communication et du travail en équipe.
-\end{itemize}
-\textbf{Inventoriste} \hfill Nov. 2021 – Juil. 2024 \\
-\textit{RGIS France, Avignon}
-\begin{itemize}[leftmargin=*,noitemsep]
-    \item Réalisation d’inventaires précis pour divers clients professionnels.
-    \item Utilisation d’outils de comptage électroniques avec contrôle qualité et respect des délais.
+    \item \textbf{Intelligence Artificielle :} Python (NumPy, Scikit-learn, PyTorch, Keras, Transformers/Hugging Face), Machine Learning, Deep Learning, Reinforcement Learning (RL), IA explicable (XAI), Algorithmique avancée (graphes, optimisation, complexité).
+    \item \textbf{Développement Backend :} Java (Spring Boot), Python (Flask), Node.js, PHP, C/C++, REST APIs.
+    \item \textbf{Frontend :} JavaScript, TypeScript, Vue.js, HTML5/CSS3, Tailwind CSS, Architecture MVC.
+    \item \textbf{Base de données \& DevOps :} PostgreSQL (pgvector), MySQL, Docker, Git, GitLab CI/CD, Linux (Bash).
+    \item \textbf{Langues \& Divers :} Français (avancé), Anglais (opérationnel / technique), Arabe (natif), Permis B.
 \end{itemize}
 
 % CERTIFICATIONS
