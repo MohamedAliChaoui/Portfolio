@@ -1,15 +1,17 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[left=1.8cm, right=1.8cm, top=1.5cm, bottom=1.5cm]{geometry}
+\usepackage[left=1.3cm, right=1.3cm, top=0.9cm, bottom=0.9cm]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{graphicx}
-\usepackage{wrapfig}
 \usepackage{tikz}
-\usepackage{qrcode} % Nécessaire pour le QR Code
+
+% Configuration des listes
+\setlist[itemize]{noitemsep, topsep=1pt, parsep=0pt, partopsep=0pt}
+\setlength{\parindent}{0pt}
 
 % Couleurs et liens
 \definecolor{primary}{RGB}{0,70,140}
@@ -20,151 +22,94 @@
 }
 
 % Mise en forme des titres
-\titleformat{\section}{\Large\bfseries\color{primary}}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{12pt}{6pt}
+\titleformat{\section}{\large\bfseries\color{primary}}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{4pt}{2pt}
 
 \begin{document}
+\pagestyle{empty}
 
 % HEADER
-\begin{minipage}[t]{0.72\textwidth}
+\begin{minipage}[t]{0.73\textwidth}
     \vspace{0pt}
-    {\Huge \textbf{Mohamed Ali Chaoui}} \\[5pt]
-    \href{mailto:ali.chaoui.123@gmail.com}{ali.chaoui.123@gmail.com} \,|\, +33 6 51 61 56 86 \,|\, Bordeaux, France \,|\, Permis B \\[8pt]
-    
-    % Liens cliquables sur PDF et lisibles sur papier
-    \textbf{GitHub :} \href{https://github.com/MohamedAliChaoui}{github.com/MohamedAliChaoui} \\
+    {\Huge \textbf{Mohamed Ali Chaoui}} \\[4pt]
+    \href{mailto:ali.chaoui.123@gmail.com}{ali.chaoui.123@gmail.com} \,|\, +33 6 51 61 56 86 \,|\, Bordeaux, France \,|\, Permis B \\[3pt]
     \textbf{LinkedIn :} \href{https://www.linkedin.com/in/mohamed-ali-chaoui-25151b196}{linkedin.com/in/mohamed-ali-chaoui} \\
+    \textbf{GitHub :} \href{https://github.com/MohamedAliChaoui}{github.com/MohamedAliChaoui} \\
     \textbf{Portfolio :} \href{https://portfolio-chaoui-mohamed-ali.vercel.app/}{portfolio-chaoui-mohamed-ali.vercel.app}
 \end{minipage}%
-\begin{minipage}[t]{0.25\textwidth}
-    \vspace{-20pt}
+\begin{minipage}[t]{0.26\textwidth}
+    \vspace{-10pt}
     \begin{flushright}
         % Photo de profil
         \begin{tikzpicture}
-            \node[draw=gray, line width=0.5pt, circle, inner sep=0pt, minimum size=2.9cm, path picture={
+            \node[draw=gray, line width=0.5pt, circle, inner sep=0pt, minimum size=2.6cm, path picture={
                 \node at (path picture bounding box.center){
-                    \includegraphics[width=2.9cm]{Photo PRO.jpeg}
+                    \includegraphics[width=2.6cm]{Photo PRO.jpeg}
                 };
             }] {};
         \end{tikzpicture}
-        
-        \vspace{6pt}
-        
-        % QR Code vers le Portfolio (le plus utile à scanner)
-        \qrcode[height=1.4cm]{https://portfolio-chaoui-mohamed-ali.vercel.app/}
-        
-        \vspace{2pt}
-        {\tiny \textit{Mon Portfolio}}
     \end{flushright}
 \end{minipage}
 
 % PROFIL
 \section*{Profil}
-Étudiant en \textbf{Master Informatique – Spécialité Intelligence Artificielle} à l’Université de Bordeaux, spécialisé dans la conception de modèles d'apprentissage (Machine Learning, Deep Learning, Reinforcement Learning), la résolution de problèmes d'optimisation (graphes, chemins) et l’ingénierie logicielle. J’aime concevoir des systèmes intelligents et robustes alliant logique algorithmique et développement full-stack. Je recherche un \textbf{stage de fin d'études de 6 mois en Intelligence Artificielle} à partir de \textbf{mars 2027}, mobile dans toute la France.
+Étudiant en \textbf{Master Informatique -- Spécialité Intelligence Artificielle} à l'Université de Bordeaux. Formé aux méthodes de Machine Learning, Deep Learning et Apprentissage par Renforcement, avec un socle rigoureux en ingénierie logicielle et algorithmique avancée. Recherche un stage de fin d'études de 6 mois dès mars 2027 en \textbf{Machine Learning / Ingénierie IA} (mobile dans toute la France).
 
 % EXPÉRIENCE
 \section*{Expérience Professionnelle}
-\textbf{Stagiaire Serious Games -- Projet CAP IA} \hfill Mai 2026 – Juil. 2026 \\
-\textit{Inria, Talence (Stage)}
-\begin{itemize}[leftmargin=*,noitemsep]
-    \item Contribution au projet CAP IA de l'Université de Bordeaux visant à renforcer l'attractivité des formations en intelligence artificielle.
-    \item Développement de serious games axés sur l'optimisation mathématique et l'intelligence artificielle.
-    \item Réécriture de l'application serveur de Java (Spring Boot) vers Python (Flask) et développement sur le jeu "Le Voyageur de Commerce Intersidéral".
-    \item Optimisation des fonctionnalités existantes et intégration d'améliorations logicielles.
+\textbf{Stagiaire Développement \& Optimisation -- Projet CAP IA} \hfill Mai 2026 – Juil. 2026 \\
+\hspace*{12pt}\textit{Inria, Talence}
+\begin{itemize}[leftmargin=18pt,noitemsep]
+    \item Contribution au serious game \textit{"Le Voyageur de Commerce Intersidéral"} (sensibilisation à l'IA et à l'optimisation).
+    \item Réécriture complète du backend de Java (Spring Boot) vers Python (Flask) et refonte de l'architecture serveur.
+    \item Implémentation et optimisation d'algorithmes et heuristiques de résolution du problème du voyageur de commerce (TSP).
+    \item \textbf{Démo en ligne :} \href{https://campus-ia.u-bordeaux.fr/voyageur-de-commerce/}{campus-ia.u-bordeaux.fr/voyageur-de-commerce}
 \end{itemize}
+\vspace{3pt}
 \textbf{Équipier de commerce} \hfill Août 2024 – Présent \\
-\textit{Auchan Retail, Mérignac}
-\begin{itemize}[leftmargin=*,noitemsep]
-    \item Accueil client et conseil personnalisé garantissant un service de qualité.
-    \item Gestion des stocks et mise en rayon efficace dans un environnement dynamique.
-    \item Développement de la rigueur, de la communication et du travail en équipe.
-\end{itemize}
-\textbf{Inventoriste} \hfill Nov. 2021 – Juil. 2024 \\
-\textit{RGIS France, Avignon}
-\begin{itemize}[leftmargin=*,noitemsep]
-    \item Réalisation d’inventaires précis pour divers clients professionnels.
-    \item Utilisation d’outils de comptage électroniques avec contrôle qualité et respect des délais.
-\end{itemize}
+\hspace*{12pt}\textit{Auchan Retail, Mérignac} -- Gestion des flux de produits, relation client et dynamisme en équipe. \\[3pt]
+\textbf{Inventoriste professionnel} \hfill Nov. 2021 – Juil. 2024 \\
+\hspace*{12pt}\textit{RGIS France, Avignon} -- Réalisation d'inventaires de précision, contrôle qualité et respect des délais.
 
 % FORMATION
 \section*{Formation}
-\textbf{Master Informatique – Parcours Intelligence Artificielle} \hfill Sept. 2025 – Sept. 2027 \\
-\textit{Université de Bordeaux}
-\begin{itemize}[leftmargin=*,noitemsep]
-    \item \textbf{Modèles \& Apprentissage :} Réseaux neuronaux avancés, apprentissage par renforcement (RL), Machine \& Deep Learning.
-    \item \textbf{Raisonnement \& Éthique :} Représentation des connaissances, IA explicable (XAI), IA durable et frugale.
-    \item \textbf{Méthodologie :} Analyse d'articles scientifiques, séminaires de recherche, vision par ordinateur et complexité algorithmique.
-\end{itemize}
-\textbf{Licence 3 Informatique} \hfill Sept. 2024 – Juin 2025 \\
-\textit{Université de Bordeaux}
-\begin{itemize}[leftmargin=*,noitemsep]
-    \item Algorithmique avancée (graphes, complexité), programmation fonctionnelle (OCaml), compilation, programmation système, logique formelle et projet de développement logiciel en équipe.
-\end{itemize}
-\textbf{Licence 1 et 2 Informatique} \hfill Sept. 2020 – Juin 2024 \\
-\textit{Université d’Avignon}
-\begin{itemize}[leftmargin=*,noitemsep]
-    \item Programmation impérative (C, Python), structures de données et algorithmique, bases de données relationnelles (SQL), réseaux informatiques et systèmes d’exploitation Linux/Windows, initiation au développement web.
-\end{itemize}
-
-\newpage
+\textbf{Master Informatique – Parcours Intelligence Artificielle} \hfill Sept. 2025 – Août 2027 \\
+\hspace*{12pt}\textit{Université de Bordeaux} -- Machine \& Deep Learning, Reinforcement Learning (RL), XAI, Optimisation. \\[3pt]
+\textbf{Licence Informatique (L3)} \hfill Sept. 2024 – Juin 2025 \\
+\hspace*{12pt}\textit{Université de Bordeaux} -- Algorithmique avancée, complexité, programmation système et génie logiciel. \\[3pt]
+\textbf{Licence Informatique (L1 \& L2)} \hfill Sept. 2020 – Juin 2024 \\
+\hspace*{12pt}\textit{Université d’Avignon} -- Structures de données, algorithmique, programmation C/Python et bases relationnelles.
 
 % PROJETS
 \section*{Projets Académiques \& Personnels}
-\textbf{Serious Game : "Le Voyageur de Commerce Intersidéral"} \hfill 2026 \\
-\textit{Inria Talence (Projet CAP IA)}
-\begin{itemize}[leftmargin=*,noitemsep]
-    \item Contribution au développement d'un jeu vidéo éducatif visant à promouvoir les formations en intelligence artificielle.
-    \item Réécriture complète de l'application serveur de Java (Spring Boot) vers Python (Flask).
-    \item Optimisation des algorithmes de résolution du problème du voyageur de commerce (TSP).
-    \item \textbf{Démo :} \href{https://campus-ia.u-bordeaux.fr/voyageur-de-commerce/}{campus-ia.u-bordeaux.fr/voyageur-de-commerce}
-    \item \textbf{Technos :} Python, Flask, Java, Spring Boot, HTML, JavaScript, Tailwind CSS.
+\textbf{IA Décisionnelle \& Deep Learning -- Jeu des Amazones} \hfill 2026 \\
+\hspace*{12pt}\textit{Université de Bordeaux (Master IA)}
+\begin{itemize}[leftmargin=18pt,noitemsep]
+    \item \textbf{Modélisation \& Évaluation :} Entraînement d'un réseau de neurones (\textbf{Keras}) pour l'évaluation de positions sur plateaux dynamiques.
+    \item \textbf{IA Hybride :} Exploration combinatoire combinant \textbf{MCTS} (Monte-Carlo Tree Search) et algorithme Minimax avec élagage \textbf{Alpha-Bêta} ($\alpha$-$\beta$).
+    \item \textbf{Optimisation bas niveau :} Représentation par \textbf{bitboards} maximisant le débit d'évaluation ; multijoueur asynchrone (\textbf{asyncio}, Pytest).
 \end{itemize}
-\textbf{Jeu de plateau stratégique (Jeu des Amazones)} \hfill 2026 \\
-\textit{Université de Bordeaux ( Master IA )}
-\begin{itemize}[leftmargin=*,noitemsep]
-    \item \textbf{Moteur} : Représentation via bitboards de taille dynamique (4x4 à 11x11).
-    \item \textbf{IA Hybride} : Algorithme Minimax ($\alpha\beta$) combiné à MCTS et Keras (Deep Learning).
-    \item \textbf{Réseau \& GUI} : Modèle MVC strict, multijoueur client-serveur asynchrone (asyncio), interface GTK4.
-    \item \textbf{Technos :} Python, PyGObject, Keras, asyncio, pytest.
+\vspace{3pt}
+\textbf{Indexation Vectorielle \& Recherche de Similarité d'Images} \hfill 2024 \\
+\hspace*{12pt}\textit{Université de Bordeaux}
+\begin{itemize}[leftmargin=18pt,noitemsep]
+    \item Système de recherche par similarité sémantique basé sur des représentations vectorielles (\textit{embeddings}) via \textbf{PostgreSQL / pgvector}.
+    \item Recherche des plus proches voisins (k-NN, distance cosinus) et développement de l'API backend REST (Java, Spring Boot, Vue.js).
 \end{itemize}
-\textbf{Moteur de Jeu Vidéo Vintage \& Architecture Logicielle} \hfill 2025 \\
-\textit{Université de Bordeaux}
-\begin{itemize}[leftmargin=*,noitemsep]
-    \item Développement d’un moteur RPG 2D inspiré des années 90 avec architecture MVC et Design Patterns.
-    \item Conception orientée objet et gestion avancée des collisions et événements utilisateurs.
-    \item \textbf{Technos :} Java, Swing, Design Patterns (Observer, Strategy).
-\end{itemize}
-\textbf{Application Client–Serveur de Recherche d’Images} \hfill 2024 \\
-\textit{Université de Bordeaux}
-\begin{itemize}[leftmargin=*,noitemsep]
-    \item Conception de l'architecture logicielle backend et développement d'API REST avec Java et Spring Boot.
-    \item Intégration d'un système d'indexation vectorielle (PostgreSQL/pgvector) et interfaçage avec le framework Spring.
-    \item \textbf{Technos :} Java, Spring Boot, PostgreSQL, Vue.js, GitLab CI/CD.
-\end{itemize}
-\textbf{Plate-forme de Monitoring \& Gestion d’Alerte} \hfill 2023 \\
-\textit{Université d’Avignon}
-\begin{itemize}[leftmargin=*,noitemsep]
-    \item Automatisation de la surveillance de serveurs et coordination d’alertes avec le C.E.R.T.
-    \item \textbf{Technos :} Bash, Python, Linux System Administration.
-\end{itemize}
-\textbf{Site e-commerce “myBike”} \hfill 2022 \\
-\textit{Université d’Avignon}
-\begin{itemize}[leftmargin=*,noitemsep]
-    \item Application full-stack pour gestion des commandes et interface administrateur sécurisée.
-    \item \textbf{Technos :} PHP, MySQL (PDO), HTML/CSS, MVC.
+\vspace{3pt}
+\textbf{Raisonnement Automatique \& Résolution de Problème NP-Complet (SAT)} \hfill 2025 \\
+\hspace*{12pt}\textit{Université de Bordeaux}
+\begin{itemize}[leftmargin=18pt,noitemsep]
+    \item Modélisation formelle de contraintes et résolution par \textbf{réduction polynomiale vers SAT} (IA symbolique).
+    \item Implémentation en C avec optimisation stricte de la mémoire et benchmark des performances algorithmiques.
 \end{itemize}
 
 % COMPÉTENCES
 \section*{Compétences Techniques}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item \textbf{Intelligence Artificielle :} Python (NumPy, Scikit-learn, PyTorch, Keras, Transformers/Hugging Face), Machine Learning, Deep Learning, Reinforcement Learning (RL), IA explicable (XAI), Algorithmique avancée (graphes, optimisation, complexité).
-    \item \textbf{Développement Backend :} Java (Spring Boot), Python (Flask), Node.js, PHP, C/C++, REST APIs.
-    \item \textbf{Frontend :} JavaScript, TypeScript, Vue.js, HTML5/CSS3, Tailwind CSS, Architecture MVC.
-    \item \textbf{Base de données \& DevOps :} PostgreSQL (pgvector), MySQL, Docker, Git, GitLab CI/CD, Linux (Bash).
-    \item \textbf{Langues \& Divers :} Français (avancé), Anglais (opérationnel / technique), Arabe (natif), Permis B.
+    \item \textbf{Intelligence Artificielle :} Python (NumPy, Scikit-learn, PyTorch, Keras, Transformers), Machine Learning, Deep Learning, Reinforcement Learning (RL), IA explicable (XAI), Algorithmique avancée (graphes, optimisation, complexité).
+    \item \textbf{Développement Logiciel :} Java (Spring Boot), Python (Flask), C/C++, PostgreSQL (pgvector), MySQL, Git, Docker, Linux (Bash).
+    \item \textbf{Langues :} Français (bilingue), Anglais (B1 - Linguaskill Cambridge), Arabe (langue maternelle).
 \end{itemize}
 
-% CERTIFICATIONS
-\section*{Certifications}
-\textbf{Linguaskill – Cambridge Assessment English (Niveau B1)} \hfill Déc. 2024
 \end{document}

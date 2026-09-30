@@ -34,22 +34,22 @@ export const portfolioData: PortfolioData = {
         company: "Inria",
         period: { fr: "Mai 2026 - Juillet 2026", en: "May 2026 - July 2026" },
         description: {
-          fr: `Contribution au projet CAP IA de l'Université de Bordeaux visant à renforcer l'attractivité des formations en intelligence artificielle. Développement de serious games axés sur l'optimisation mathématique et l'intelligence artificielle.
+          fr: `Contribution au projet CAP IA de l'Université de Bordeaux (sensibilisation à l'IA et à l'optimisation). Développement sur le serious game "Le Voyageur de Commerce Intersidéral".
 
 Missions :
-- Développement sur le jeu "Le Voyageur de Commerce Intersidéral".
-- Réécriture de l'application serveur de Java (Spring Boot) vers Python (Flask).
+- Implémentation et optimisation d'algorithmes et heuristiques de résolution du problème du voyageur de commerce (TSP).
+- Réécriture complète de l'application serveur de Java (Spring Boot) vers Python (Flask).
 - Optimisation des fonctionnalités existantes et intégration d'améliorations logicielles.
 
-Technologies : Python, Java, Flask, Spring Boot, IA, HTML, JavaScript, Tailwind CSS`,
-          en: `Contribution to the CAP IA project at the University of Bordeaux aimed at strengthening the attractiveness of AI programs. Development of serious games focused on mathematical optimization and artificial intelligence.
+Technologies : Python, Flask, Java, Spring Boot, Algorithmique TSP, HTML, JavaScript, Tailwind CSS`,
+          en: `Contribution to the CAP IA project at the University of Bordeaux (raising awareness of AI and optimization). Development on the serious game "The Interstellar Traveling Salesperson".
 
 Missions:
-- Development on the "Interstellar Traveling Salesperson" game.
-- Rewrite of the server application from Java (Spring Boot) to Python (Flask).
+- Implementation and optimization of algorithms and heuristics for solving the Traveling Salesperson Problem (TSP).
+- Complete rewrite of the server application from Java (Spring Boot) to Python (Flask).
 - Optimization of existing features and integration of software improvements.
 
-Technologies: Python, Java, Flask, Spring Boot, AI, HTML, JavaScript, Tailwind CSS`
+Technologies: Python, Flask, Java, Spring Boot, TSP Algorithms, HTML, JavaScript, Tailwind CSS`
         }
       },
       {
@@ -62,12 +62,12 @@ Technologies: Python, Java, Flask, Spring Boot, AI, HTML, JavaScript, Tailwind C
         }
       },
       {
-        position: { fr: "Expert en inventaire", en: "Inventory Expert" },
+        position: { fr: "Inventoriste professionnel", en: "Professional Inventory Associate" },
         company: "RGIS",
-        period: { fr: "Novembre 2021 - Juin 2024", en: "November 2021 - June 2024" },
+        period: { fr: "Novembre 2021 – Juillet 2024", en: "November 2021 – July 2024" },
         description: {
-          fr: "Réalisation d'inventaires précis pour professionnels, utilisation d'outils de comptage électroniques et respect des délais.",
-          en: "Precise inventory execution for professionals, use of electronic counting tools and adherence to deadlines."
+          fr: "Réalisation d'inventaires de précision, contrôle qualité et respect des délais.",
+          en: "Execution of precise inventory audits, quality control, and adherence to deadlines."
         }
       }
     ],
@@ -75,7 +75,7 @@ Technologies: Python, Java, Flask, Spring Boot, AI, HTML, JavaScript, Tailwind C
       {
         degree: { fr: "Master - Informatique (IA)", en: "Master - Computer Science (AI)" },
         institution: { fr: "Université de Bordeaux", en: "University of Bordeaux" },
-        period: { fr: "Septembre 2025 – Septembre 2027", en: "September 2025 – September 2027" },
+        period: { fr: "Septembre 2025 – Août 2027", en: "September 2025 – August 2027" },
         description: {
           fr: "• Modèles & Apprentissage : Réseaux neuronaux avancés, apprentissage par renforcement (RL), Machine & Deep Learning.\n• Raisonnement & Éthique : Représentation des connaissances, IA explicable (XAI), IA durable.\n• Méthodologie : Analyse d'articles scientifiques, séminaires de recherche, vision par ordinateur et complexité algorithmique.",
           en: "• Models & Learning: Advanced Neural Networks, Reinforcement Learning (RL), Machine & Deep Learning.\n• Reasoning & Ethics: Knowledge Representation, Explainable AI (XAI), Sustainable AI.\n• Methodology: Scientific papers analysis, research seminars, computer vision and algorithmic complexity."
@@ -142,32 +142,35 @@ Technologies: Python, Java, Flask, Spring Boot, AI, HTML, JavaScript, Tailwind C
       title: { fr: "Le Voyageur de Commerce Intersidéral", en: "The Interstellar Traveling Salesperson" },
       year: "2026",
       description: {
-        fr: "Serious game développé dans le cadre du projet CAP IA pour renforcer l'attractivité des formations en IA. Réécriture complète du backend de Java (Spring Boot) vers Python (Flask), et intégration de fonctionnalités et d'améliorations logicielles.",
-        en: "Serious game developed for the CAP IA project to boost the appeal of AI programs. Complete backend rewrite from Java (Spring Boot) to Python (Flask), and integration of features and software improvements."
+        fr: "Serious game développé dans le cadre du projet CAP IA (sensibilisation à l'IA et à l'optimisation). Implémentation et optimisation d'heuristiques de résolution du problème du voyageur de commerce (TSP), et réécriture complète de l'application serveur de Java (Spring Boot) vers Python (Flask).",
+        en: "Serious game developed for the CAP IA project (AI and optimization awareness). Implementation and optimization of heuristics for the Traveling Salesperson Problem (TSP), and complete backend rewrite from Java (Spring Boot) to Python (Flask)."
       },
-      technologies: ["Python", "Flask", "Java", "Spring Boot", "HTML", "JavaScript", "Tailwind CSS"],
+      technologies: ["Python", "Flask", "Java", "Spring Boot", "Algorithmique TSP", "Tailwind CSS"],
       image: voyageurCommerceThumbnail,
       icon: "fas fa-space-shuttle",
       demoUrl: "https://campus-ia.u-bordeaux.fr/voyageur-de-commerce/"
     },
     {
       id: "p_amazons_game",
-      title: { fr: "Jeu des Amazones (IA & Réseau)", en: "Game of the Amazons (AI & Network)" },
+      title: { fr: "IA Décisionnelle & Deep Learning – Jeu des Amazones", en: "Decision AI & Deep Learning – Game of the Amazons" },
       year: "2026",
       description: {
-        fr: "Moteur de jeu complet avec IA hybride (Minimax/αβ + MCTS/Keras) et architecture client-serveur asynchrone.",
-        en: "Full game engine with hybrid AI (Minimax/αβ + MCTS/Keras) and asynchronous client-server architecture."
+        fr: "Moteur de jeu complet avec IA hybride combinant MCTS (Monte-Carlo Tree Search) et Minimax avec élagage Alpha-Bêta, réseau de neurones Keras pour l'évaluation de positions, représentation par bitboards et réseau asynchrone (asyncio, Pytest).",
+        en: "Full game engine with hybrid AI combining MCTS (Monte-Carlo Tree Search) and Minimax with Alpha-Beta pruning, Keras neural network for board evaluation, bitboard representation, and asynchronous networking (asyncio, Pytest)."
       },
-      technologies: ["Python", "PyGObject", "Keras", "asyncio"],
+      technologies: ["Python", "Keras", "MCTS", "Minimax α-β", "Bitboards", "asyncio"],
       image: "https://images.unsplash.com/photo-1528819622765-d6bcf132f793?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       icon: "fas fa-chess-board"
     },
     {
       id: "p_algo_sat",
-      title: { fr: "Solveur Algorithmique (SAT)", en: "Algorithmic Solver (SAT)" },
+      title: { fr: "Raisonnement Automatique & Résolution SAT", en: "Automated Reasoning & SAT Solving" },
       year: "2025",
-      description: { fr: "Conception d'un solveur en C pour le problème NP-complet 'TUNNEL'. Réduction polynomiale vers SAT et optimisation de la gestion mémoire.", en: "Design of a C solver for the NP-complete 'TUNNEL' problem. Polynomial reduction to SAT and memory management optimization." },
-      technologies: ["C", "Algorithmique", "Complexité"],
+      description: {
+        fr: "Modélisation formelle de contraintes et résolution de problème NP-complet par réduction polynomiale vers SAT (IA symbolique). Conception du solveur en C avec optimisation stricte de la mémoire et benchmark des performances.",
+        en: "Formal constraint modeling and NP-complete problem solving via polynomial reduction to SAT (Symbolic AI). Solver designed in C with strict memory optimization and performance benchmarking."
+      },
+      technologies: ["C", "IA Symbolique", "Solveur SAT", "Complexité"],
       image: "https://images.unsplash.com/photo-1509228468518-180dd4864904?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       icon: "fas fa-brain"
     },
@@ -182,10 +185,13 @@ Technologies: Python, Java, Flask, Spring Boot, AI, HTML, JavaScript, Tailwind C
     },
     {
       id: "p_img_search",
-      title: { fr: "Recherche d'Images Distribuée", en: "Distributed Image Search" },
-      year: "2023",
-      description: { fr: "Système de recherche d'images par similarité utilisant pgvector pour l'indexation vectorielle. Architecture micro-services.", en: "Image similarity search system using pgvector for vector indexing. Micro-services architecture." },
-      technologies: ["PostgreSQL", "pgvector", "Spring Boot", "Vue.js"],
+      title: { fr: "Indexation Vectorielle & Recherche d'Images", en: "Vector Indexing & Image Search" },
+      year: "2024",
+      description: {
+        fr: "Système de recherche par similarité sémantique basé sur des représentations vectorielles (embeddings) via PostgreSQL / pgvector. Recherche des plus proches voisins (k-NN, distance cosinus) et développement de l'API backend REST (Java, Spring Boot, Vue.js).",
+        en: "Semantic similarity search system based on vector representations (embeddings) via PostgreSQL / pgvector. Nearest neighbor search (k-NN, cosine distance) and Spring Boot REST backend development (Java, Spring Boot, Vue.js)."
+      },
+      technologies: ["PostgreSQL", "pgvector", "Embeddings", "Spring Boot", "Vue.js"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       icon: "fas fa-search",
       demoUrl: "https://similarity-pic.vercel.app/"
