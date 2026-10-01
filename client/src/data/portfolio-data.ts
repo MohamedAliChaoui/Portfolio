@@ -160,7 +160,8 @@ Technologies: Python, Flask, Java, Spring Boot, TSP Algorithms, HTML, JavaScript
       },
       technologies: ["Python", "Keras", "MCTS", "Minimax α-β", "Bitboards", "asyncio"],
       image: "https://images.unsplash.com/photo-1528819622765-d6bcf132f793?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-      icon: "fas fa-chess-board"
+      icon: "fas fa-chess-board",
+      demoUrl: "https://mohamedalichaoui.github.io/Amazons-game/"
     },
     {
       id: "p_algo_sat",

@@ -83,7 +83,7 @@
 % PROJETS
 \section*{Projets Académiques \& Personnels}
 \textbf{IA Décisionnelle \& Deep Learning -- Jeu des Amazones} \hfill 2026 \\
-\hspace*{12pt}\textit{Université de Bordeaux (Master IA)}
+\hspace*{12pt}\textit{Université de Bordeaux (Master IA)} \,|\, \textbf{Démo en ligne :} \href{https://mohamedalichaoui.github.io/Amazons-game/}{mohamedalichaoui.github.io/Amazons-game}
 \begin{itemize}[leftmargin=18pt,noitemsep]
     \item \textbf{Modélisation \& Évaluation :} Entraînement d'un réseau de neurones (\textbf{Keras}) pour l'évaluation de positions sur plateaux dynamiques.
     \item \textbf{IA Hybride :} Exploration combinatoire combinant \textbf{MCTS} (Monte-Carlo Tree Search) et algorithme Minimax avec élagage \textbf{Alpha-Bêta} ($\alpha$-$\beta$).
