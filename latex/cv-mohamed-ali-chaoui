@@ -97,17 +97,17 @@
     \item Recherche des plus proches voisins (k-NN, distance cosinus) et développement de l'API backend REST (Java, Spring Boot, Vue.js).
 \end{itemize}
 \vspace{3pt}
-\textbf{Raisonnement Automatique \& Résolution de Problème NP-Complet (SAT)} \hfill 2025 \\
-\hspace*{12pt}\textit{Université de Bordeaux}
+\textbf{RAG Scientifique de Haute Précision -- Recherche Hybride \& Dense} \hfill 2026 \\
+\hspace*{12pt}\textit{Projet Personnel d'Ingénierie IA (NLP / LLM)}
 \begin{itemize}[leftmargin=18pt,noitemsep]
-    \item Modélisation formelle de contraintes et résolution par \textbf{réduction polynomiale vers SAT} (IA symbolique).
-    \item Implémentation en C avec optimisation stricte de la mémoire et benchmark des performances algorithmiques.
+    \item \textbf{Architecture from scratch :} Système RAG modulaire sans wrapper (Python, PyTorch) sur 300 articles arXiv (16k+ passages), parsing HTML (LaTeXML) avec isolation de sections et couverture textuelle à 100,00\,\%.
+    \item \textbf{Retrieval Hybride \& Citations :} Moteur dense NumPy (Bi-Encoder BGE v1.5, latence $<10$ ms) et BM25 Lucene ($<1$ ms), contrôle d'intégrité SHA-256 et citations vérifiables au paragraphe (ancres HTML).
 \end{itemize}
 
 % COMPÉTENCES
 \section*{Compétences Techniques}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item \textbf{Intelligence Artificielle :} Python (NumPy, Scikit-learn, PyTorch, Keras, Transformers), Machine Learning, Deep Learning, Reinforcement Learning (RL), IA explicable (XAI), Algorithmique avancée (graphes, optimisation, complexité).
+    \item \textbf{Intelligence Artificielle :} Python (NumPy, Scikit-learn, PyTorch, Keras, Transformers, BGE), Machine Learning, Deep Learning, RAG (Retrieval-Augmented Generation, BM25, embeddings), Reinforcement Learning (RL), XAI.
     \item \textbf{Développement Logiciel :} Java (Spring Boot), Python (Flask), C/C++, PostgreSQL (pgvector), MySQL, Git, Docker, Linux (Bash).
     \item \textbf{Langues :} Français (bilingue), Anglais (B1 - Linguaskill Cambridge), Arabe (langue maternelle).
 \end{itemize}

@@ -116,6 +116,7 @@ Technologies: Python, Flask, Java, Spring Boot, TSP Algorithms, HTML, JavaScript
       { name: "OCaml", level: 75, icon: "fas fa-code", color: "#ec6813" }
     ],
     frameworks: [
+      { name: "RAG & Retrieval Hybride (BM25, BGE)", level: 85, icon: "fas fa-search", color: "#6366f1" },
       { name: "PyTorch", level: 85, icon: "devicon-pytorch-original colored", color: "#ee4c2c" },
       { name: "Transformers / Hugging Face", level: 80, icon: "fas fa-robot", color: "#ffd21e" },
       { name: "Gymnasium / RL (Renforcement)", level: 80, icon: "fas fa-gamepad", color: "#10b981" },
@@ -137,6 +138,18 @@ Technologies: Python, Flask, Java, Spring Boot, TSP Algorithms, HTML, JavaScript
     ]
   },
   projects: [
+    {
+      id: "p_scientific_rag",
+      title: { fr: "RAG Scientifique & Recherche Hybride (arXiv)", en: "Scientific RAG & Hybrid Retrieval (arXiv)" },
+      year: "2026",
+      description: {
+        fr: "Système RAG modulaire conçu from scratch (sans wrappers) sur 300 articles arXiv (16 310 passages). Pipeline ETL HTML LaTeXML préservant les sections et tableaux (couverture textuelle 100,00 % validée par 8-grammes), recherche hybride combinant BM25 Lucene (< 1 ms) et dense vectoriel NumPy (Bi-Encoder BGE v1.5, < 10 ms), intégrité SHA-256 et citations vérifiables au paragraphe.",
+        en: "Production-grade modular RAG system built from scratch (no wrappers) over 300 arXiv papers (16,310 passages). Resilient LaTeXML HTML ETL preserving section hierarchy and tables (100.00% textual coverage validated by 8-grams), hybrid retrieval combining Lucene BM25 (< 1 ms) and dense NumPy vector search (Bi-Encoder BGE v1.5, < 10 ms), SHA-256 integrity, and verifiable paragraph-level citations."
+      },
+      technologies: ["Python 3.13", "PyTorch", "Hugging Face", "Sentence-Transformers", "BM25", "NumPy", "BeautifulSoup4", "pytest"],
+      image: "https://images.unsplash.com/photo-1507668077129-56e32842fceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      icon: "fas fa-microscope"
+    },
     {
       id: "p_voyageur_commerce",
       title: { fr: "Le Voyageur de Commerce Intersidéral", en: "The Interstellar Traveling Salesperson" },
