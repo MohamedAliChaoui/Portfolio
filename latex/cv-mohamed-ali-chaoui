@@ -82,6 +82,13 @@
 
 % PROJETS
 \section*{Projets Académiques \& Personnels}
+\textbf{RAG Scientifique de Haute Précision -- Recherche Hybride \& Dense} \hfill 2026 \\
+\hspace*{12pt}\textit{Projet Personnel d'Ingénierie IA (NLP / LLM)}
+\begin{itemize}[leftmargin=18pt,noitemsep]
+    \item \textbf{Architecture from scratch :} Système RAG modulaire sans wrapper (Python, PyTorch) sur 300 articles arXiv (16k+ passages), parsing HTML (LaTeXML) avec isolation de sections et couverture textuelle à 100,00\,\%.
+    \item \textbf{Retrieval Hybride \& Citations :} Moteur dense NumPy (Bi-Encoder BGE v1.5, latence $<10$ ms) et BM25 Lucene ($<1$ ms), contrôle d'intégrité SHA-256 et citations vérifiables au paragraphe (ancres HTML).
+\end{itemize}
+\vspace{3pt}
 \textbf{IA Décisionnelle \& Deep Learning -- Jeu des Amazones} \hfill 2026 \\
 \hspace*{12pt}\textit{Université de Bordeaux (Master IA)} \,|\, \textbf{Démo en ligne :} \href{https://mohamedalichaoui.github.io/Amazons-game/}{mohamedalichaoui.github.io/Amazons-game}
 \begin{itemize}[leftmargin=18pt,noitemsep]
@@ -95,13 +102,6 @@
 \begin{itemize}[leftmargin=18pt,noitemsep]
     \item Système de recherche par similarité sémantique basé sur des représentations vectorielles (\textit{embeddings}) via \textbf{PostgreSQL / pgvector}.
     \item Recherche des plus proches voisins (k-NN, distance cosinus) et développement de l'API backend REST (Java, Spring Boot, Vue.js).
-\end{itemize}
-\vspace{3pt}
-\textbf{RAG Scientifique de Haute Précision -- Recherche Hybride \& Dense} \hfill 2026 \\
-\hspace*{12pt}\textit{Projet Personnel d'Ingénierie IA (NLP / LLM)}
-\begin{itemize}[leftmargin=18pt,noitemsep]
-    \item \textbf{Architecture from scratch :} Système RAG modulaire sans wrapper (Python, PyTorch) sur 300 articles arXiv (16k+ passages), parsing HTML (LaTeXML) avec isolation de sections et couverture textuelle à 100,00\,\%.
-    \item \textbf{Retrieval Hybride \& Citations :} Moteur dense NumPy (Bi-Encoder BGE v1.5, latence $<10$ ms) et BM25 Lucene ($<1$ ms), contrôle d'intégrité SHA-256 et citations vérifiables au paragraphe (ancres HTML).
 \end{itemize}
 
 % COMPÉTENCES
